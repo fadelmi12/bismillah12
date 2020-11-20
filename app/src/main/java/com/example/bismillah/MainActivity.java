@@ -44,12 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
             }
-
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-
             }
         });
         BottomNavigationView navigationView = findViewById(R.id.btn_nav);
@@ -70,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 if (id == R.id.favorite){
                     layout_tab.setVisibility(View.VISIBLE);
                     frameLayout.setVisibility(View.GONE);
-                    FavoriteFragment fragment = new FavoriteFragment();
+                    KuliahFragment fragment = new KuliahFragment();
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
@@ -78,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 if (id == R.id.profile){
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
-                    ProfileFragment fragment = new ProfileFragment();
+                    SettingFragment fragment = new SettingFragment();
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
@@ -94,28 +91,25 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-
         navigationView.setSelectedItemId(R.id.home);
     }
 }
 class Tab_adapter extends FragmentStatePagerAdapter{
-
     int jumlahTab;
     public Tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
         super(fm);
         this.jumlahTab=jmlTab;
     }
-
     @NonNull
     @Override
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                tab1 Tab1=new tab1();
-                return Tab1;
+                tabKuliah tabKuliah =new tabKuliah();
+                return tabKuliah;
             case 1:
-                tab2 Tab2=new tab2();
-                return Tab2;
+                tabKuesioner tabKuesioner =new tabKuesioner();
+                return tabKuesioner;
         }
         return null;
     }

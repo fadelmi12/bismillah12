@@ -14,10 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        android:layout_marginBottom="5dp" />
+        android:layout_above="@+id/l1"
+        android:layout_marginBottom="30dp" />
 
     <LinearLayout
+        android:id="@+id/l1"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
