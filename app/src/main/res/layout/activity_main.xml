@@ -13,18 +13,24 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/btn_nav">
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="50dp"
+            app:tabTextColor="@color/white"
+            app:tabPaddingTop="18dp"
+            app:tabIndicatorColor="@color/orange"
+            android:background="@color/ungu"
+            app:tabTextAppearance="@style/tab">
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="tab1"/>
+                android:text="Kuliah" />
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="tab2"/>
+                android:text="Kuesioner"/>
         </com.google.android.material.tabs.TabLayout>
         <LinearLayout
             android:layout_width="match_parent"

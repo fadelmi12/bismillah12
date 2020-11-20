@@ -3,17 +3,21 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/ic_baseline_dashboard_24"
+        android:iconTint="@android:color/black"
         android:title="Dashboard"/>
     <item
         android:id="@+id/favorite"
         android:icon="@drawable/ic_baseline_assignment_24"
+        android:iconTint="@android:color/black"
         android:title="Kuliah"/>
     <item
         android:id="@+id/wisuda"
         android:icon="@drawable/ic_baseline_school_24"
+        android:iconTint="@android:color/black"
         android:title="Wisuda"/>
     <item
         android:id="@+id/profile"
         android:icon="@drawable/ic_baseline_settings_24"
+        android:iconTint="@android:color/black"
         android:title="Setting"/>
 </menu>
