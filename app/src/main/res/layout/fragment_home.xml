@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <TextView
+        android:id="@+id/dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dashboard"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Selamat Datang di Student Portal"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/dashboard"
+        android:layout_marginLeft="20dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_baseline_person_24"
+            android:text="Data Diri"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:layout_marginBottom="20dp"
+            tools:ignore="RtlCompat"
+            android:gravity="top"/>
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_baseline_insert_chart_outlined_24"
+            android:background="@android:color/transparent"
+            android:text="Hasil Studi"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat"
+            android:gravity="top"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_outline_people_outline_24"
+            android:background="@android:color/transparent"
+            android:text="Data Orang Tua"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat"
+            android:layout_marginBottom="20dp"
+            android:gravity="top"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_outline_emoji_nature_24"
+            android:background="@android:color/transparent"
+            android:text="Ketrampilan"
+            android:textAlignment="center"
+            tools:ignore="RtlCompat"
+            android:gravity="top"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_outline_chrome_reader_mode_24"
+            android:background="@android:color/transparent"
+            android:text="Rekap Presensi"
+            android:textAlignment="gravity"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"/>
+        <Button
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_outline_business_24"
+            android:background="@android:color/transparent"
+            android:text="Magang / PKL"
+            android:textAlignment="center"
+            android:gravity="top"
+            android:textAllCaps="false"
+            tools:ignore="RtlCompat" />
+    </LinearLayout>
+</RelativeLayout>
