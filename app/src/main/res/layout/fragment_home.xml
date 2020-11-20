@@ -25,6 +25,14 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@id/dashboard"
         android:layout_marginLeft="20dp" />
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:src="@drawable/pict_home" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
