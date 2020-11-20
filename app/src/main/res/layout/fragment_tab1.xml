@@ -65,7 +65,6 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="30dp"
         android:orientation="vertical">
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="80dp"
@@ -74,9 +73,10 @@
             android:drawableTop="@drawable/ic_outline_chrome_reader_mode_24"
             android:drawableTint="@android:color/black"
             android:text="Pengumuman"
-            android:textAlignment="gravity"
+            android:textAlignment="center"
             android:textAllCaps="false"
-            android:gravity="top"/>
+            android:gravity="top"
+            tools:ignore="RtlCompat" />
 
     </LinearLayout>
 
