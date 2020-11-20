@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 
 public class LoginActivity extends AppCompatActivity {
     EditText txtNPM, txtPassword;
+    String KEY_NPM = "NPM";
     String url = "https://pajuts.000webhostapp.com/read.php";
     String npm, password, isiNPM, isiPASSWORD, hasil;
     private RequestQueue mQueue;
@@ -139,7 +140,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void success() {
         if (hasil.equals("Berhasil Login")) {
+            String pnpm = txtNPM.getText().toString();
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra(KEY_NPM, pnpm);
             startActivity(intent);
             Toast.makeText(this, "Selamat Datang", Toast.LENGTH_LONG).show();
         }

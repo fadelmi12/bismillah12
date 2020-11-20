@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +15,11 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+
+    public static String KEY_ACTIVITY = "msg_activity";
+    TextView txtuser;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +65,13 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        /*String npm = this.getArguments().getString("npm");
+        View rootview = inflater.inflate(R.layout.fragment_home, container, false);
+        txtuser = (TextView)rootview.findViewById(R.id.txtuser);
+        MainActivity activity = (MainActivity)getActivity();
+        Bundle result = activity.getMyData();
+        String value = result.getString("npm");
+        txtuser.setText(value);*/
         return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }

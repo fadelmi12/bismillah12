@@ -8,12 +8,14 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -23,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout layout_tab;
     TabLayout tab;
     ViewPager viewPager;
-
+    String KEY_NPM = "NPM", npm, out;
+    TextView txtuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +34,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         layout_tab=(LinearLayout)findViewById(R.id.layout_tab);
         frameLayout=(FrameLayout)findViewById(R.id.frame_layout);
+        txtuser = (TextView) findViewById(R.id.txtuser);
         tab=(TabLayout)findViewById(R.id.tab);
         Tab_adapter tab_adapter = new Tab_adapter(getSupportFragmentManager(), tab.getTabCount());
         viewPager=(ViewPager)findViewById(R.id.viewpager);
         viewPager.setAdapter(tab_adapter);
+            /*Bundle extras = getIntent().getExtras();
+            npm = extras.getString(KEY_NPM);
+            /*Bundle data = new Bundle();
+            data.putString("npm", npm);
+            HomeFragment homeFragment = new HomeFragment();
+            homeFragment.setArguments(data);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.frame_layout, homeFragment)
+                    .commit();
+        Intent intent = getIntent();
+        out = intent.getExtras().getString(npm);*/
+
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -57,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.home){
+
+
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     HomeFragment fragment = new HomeFragment();
@@ -92,6 +111,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         navigationView.setSelectedItemId(R.id.home);
+    }
+
+    public Bundle getMyData() {
+        Bundle bundle = new Bundle();
+        bundle.putString("npm",out);
+        return bundle;
     }
 }
 class Tab_adapter extends FragmentStatePagerAdapter{
