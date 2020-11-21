@@ -8,6 +8,10 @@
     </style>
     <style name="tab" parent="TextAppearance.Design.Tab">
         <item name="textAllCaps">false</item>
+        <item name="android:fontFamily">@font/ubunturegular</item>
+    </style>
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+        <item name="android:fontFamily">@font/ubunturegular</item>
     </style>
 
 </resources>
