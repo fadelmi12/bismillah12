@@ -1,7 +1,9 @@
 package com.example.bismillah;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +15,6 @@ public class DataDiri extends AppCompatActivity {
     String npm, out;
     TextView txtNpm;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +24,14 @@ public class DataDiri extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_dtdiri");
         txtNpm.setText(npm);
+        Button btnback = (Button) findViewById(R.id.btn_backdtdr);
+        btnback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
-    }
-
-    public void backToMain(View view) {
-
-        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-        finish();
     }
 }

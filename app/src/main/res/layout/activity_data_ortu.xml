@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataDiri"
-    android:background="@color/white">
-
+    android:background="@android:color/white"
+    tools:context=".DataOrtu">
     <Button
         android:id="@+id/ubhdtortu"
         android:layout_width="0dp"
@@ -15,10 +14,9 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/roundcorner"
         android:drawableStart="@drawable/ic_baseline_edit_24"
-
         android:drawableTint="@color/white"
         android:fontFamily="@font/ubunturegular"
-        android:text="ubah data diri"
+        android:text="ubah data ortu"
         android:gravity="center"
         android:textColor="@color/white"
         android:paddingLeft="14dp"
@@ -75,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/ubunturegular"
-            android:text="Data Diri"
+            android:text="Data Orang Tua"
             android:textColor="@android:color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -254,7 +252,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK"
+            android:text="Nama Ayah"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -289,7 +287,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Nama Lengkap"
+            android:text="Pekerjaan Ayah"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -323,7 +321,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Lahir"
+            android:text="Perusahaan / Instansi Ayah"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -357,7 +355,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Jenis Kelamin"
+            android:text="Nama Ibu"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -392,7 +390,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Agama"
+            android:text="Pekerjaan Ibu"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -426,7 +424,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Alamat Asal"
+            android:text="Perusahaan / Instansi Ibu"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="NIK Siswa"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#454649" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout8"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Nama Wali (Opsional)"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />
@@ -452,14 +484,14 @@
         android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
         app:layout_constraintWidth_percent=".9">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="Kota / Kab. Asal"
+            android:text="Pekerjaan Wali (Opsional)"
             android:textColor="@android:color/black"
             android:textSize="15dp"
             android:textStyle="bold" />

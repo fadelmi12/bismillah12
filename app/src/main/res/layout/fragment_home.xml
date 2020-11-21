@@ -91,6 +91,7 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btndtortu"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:drawableTop="@drawable/ic_outline_people_outline_24"

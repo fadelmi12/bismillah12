@@ -74,14 +74,23 @@ public class HomeFragment extends Fragment {
         String getArgument = getArguments().getString("npm");
         txtuser.setText(getArgument);
 
-
         Button btndtdiri = (Button) view.findViewById(R.id.btndtdiri);
+        Button btndtortu = (Button) view.findViewById(R.id.btndtortu);
         btndtdiri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String npm = txtuser.getText().toString();
                 Intent intent = new Intent(getActivity(), DataDiri.class);
                 intent.putExtra("NPM_dtdiri", npm);
+                startActivity(intent);
+            }
+        });
+        btndtortu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtuser.getText().toString();
+                Intent intent = new Intent(getActivity(), DataOrtu.class);
+                intent.putExtra("NPM_dtortu", npm);
                 startActivity(intent);
             }
         });
