@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM1 = "params";
     private static final String ARG_PARAM2 = "param2";
 
     // TODO: Rename and change types of parameters
@@ -60,26 +60,28 @@ public class HomeFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        /*String npm = this.getArguments().getString("npm");
-        View rootview = inflater.inflate(R.layout.fragment_home, container, false);
-        txtuser = (TextView)rootview.findViewById(R.id.txtuser);
-        MainActivity activity = (MainActivity)getActivity();
-        Bundle result = activity.getMyData();
-        String value = result.getString("npm");
-        txtuser.setText(value);*/
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+        txtuser = (TextView) view.findViewById(R.id.txtuser);
+        String getArgument = getArguments().getString("npm");
+        txtuser.setText(getArgument);
+
+
         Button btndtdiri = (Button) view.findViewById(R.id.btndtdiri);
         btndtdiri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String npm = txtuser.getText().toString();
                 Intent intent = new Intent(getActivity(), DataDiri.class);
+                intent.putExtra("NPM_dtdiri", npm);
                 startActivity(intent);
             }
         });

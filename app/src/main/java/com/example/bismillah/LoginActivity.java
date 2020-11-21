@@ -31,10 +31,11 @@ import java.util.logging.Logger;
 
 public class LoginActivity extends AppCompatActivity {
     EditText txtNPM, txtPassword;
-    String KEY_NPM = "NPM";
     String url = "https://pajuts.000webhostapp.com/read.php";
-    String npm, password, isiNPM, isiPASSWORD, hasil;
+    String npm, password, isiNPM, isiPASSWORD, hasil, pnpm;
     private RequestQueue mQueue;
+    private String KEY_NPM = "NPM";
+    Intent intent;
     Button btn_Login;
     ArrayList<HashMap<String, String>> hasilNPM = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> hasilPassword = new ArrayList<HashMap<String, String>>();
@@ -63,8 +64,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_login);
-        txtNPM = findViewById(R.id.txtNPM);
-        txtPassword = findViewById(R.id.txtPassword);
+        txtNPM = (EditText) findViewById(R.id.txtNPM);
+        txtPassword = (EditText) findViewById(R.id.txtPassword);
         mQueue = Volley.newRequestQueue(this);
 
         btn_Login = (Button) findViewById(R.id.btn_Login);
@@ -78,6 +79,9 @@ public class LoginActivity extends AppCompatActivity {
                 } else if (txtPassword.getText().toString().equals("")) {
                     Toast.makeText(LoginActivity.this, "Masukkan Password", Toast.LENGTH_SHORT).show();
                 } else {
+                    pnpm = txtNPM.getText().toString();
+                    intent = new Intent(LoginActivity.this, MainActivity.class);
+                    intent.putExtra(KEY_NPM, pnpm);
                     jsonParse();
                 }
             }
@@ -140,9 +144,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void success() {
         if (hasil.equals("Berhasil Login")) {
-            String pnpm = txtNPM.getText().toString();
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.putExtra(KEY_NPM, pnpm);
             startActivity(intent);
             Toast.makeText(this, "Selamat Datang", Toast.LENGTH_LONG).show();
         }

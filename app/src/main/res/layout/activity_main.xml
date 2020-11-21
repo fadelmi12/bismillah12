@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/btn_nav">
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab"
             android:layout_width="match_parent"
@@ -41,6 +42,11 @@
                 android:layout_height="match_parent">
             </androidx.viewpager.widget.ViewPager>
         </LinearLayout>
+        <EditText
+            android:id="@+id/masterNPM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdf"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

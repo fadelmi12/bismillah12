@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -25,8 +26,9 @@ public class MainActivity extends AppCompatActivity {
     LinearLayout layout_tab;
     TabLayout tab;
     ViewPager viewPager;
-    String KEY_NPM = "NPM", npm, out;
+    String KEY_NPM = "NPM", npm, npmOut;
     TextView txtuser;
+    EditText masterNPM;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,18 +41,13 @@ public class MainActivity extends AppCompatActivity {
         Tab_adapter tab_adapter = new Tab_adapter(getSupportFragmentManager(), tab.getTabCount());
         viewPager=(ViewPager)findViewById(R.id.viewpager);
         viewPager.setAdapter(tab_adapter);
-            /*Bundle extras = getIntent().getExtras();
-            npm = extras.getString(KEY_NPM);
-            /*Bundle data = new Bundle();
-            data.putString("npm", npm);
-            HomeFragment homeFragment = new HomeFragment();
-            homeFragment.setArguments(data);
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.frame_layout, homeFragment)
-                    .commit();
-        Intent intent = getIntent();
-        out = intent.getExtras().getString(npm);*/
+
+        masterNPM = (EditText) findViewById(R.id.masterNPM);
+        Bundle extras = getIntent().getExtras();
+        npm = extras.getString(KEY_NPM);
+        masterNPM.setText(npm);
+
+
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -72,13 +69,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
-
+                npmOut = masterNPM.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("npm", npmOut);
                 if (id == R.id.home){
-
 
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     HomeFragment fragment = new HomeFragment();
+                    fragment.setArguments(bundle);
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
@@ -111,12 +110,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         navigationView.setSelectedItemId(R.id.home);
-    }
-
-    public Bundle getMyData() {
-        Bundle bundle = new Bundle();
-        bundle.putString("npm",out);
-        return bundle;
     }
 }
 class Tab_adapter extends FragmentStatePagerAdapter{
