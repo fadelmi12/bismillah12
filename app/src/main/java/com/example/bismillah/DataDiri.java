@@ -33,7 +33,7 @@ public class DataDiri extends AppCompatActivity {
     JSONObject jsonObject;
     String url = "https://pajuts.000webhostapp.com/readbynpm.php";
     String npm, out;
-    TextView txtNpm,txtNIK,txtNama,txtLahir,txtAgama,txtJk,txtAlamat,txtAsal;
+    TextView txtNpm,txtNIK,txtNama,txtLahir,txtAgama,txtJk,txtAlamat,txtAsal, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +49,15 @@ public class DataDiri extends AppCompatActivity {
         txtJk = (TextView) findViewById(R.id.jkDtDr);
         txtAlamat = (TextView) findViewById(R.id.alamatDtDr);
         txtAsal = (TextView) findViewById(R.id.asalDtDr);
+        txtAngkatan = (TextView) findViewById(R.id.angkatanDtDr);
+        txtProdi = (TextView) findViewById(R.id.prodiDtDr);
+        txtKelas = (TextView) findViewById(R.id.kelasDtDr);
+        txtNo = (TextView) findViewById(R.id.noDtDr);
+        txtKota = (TextView) findViewById(R.id.kotaDtDr);
+        txtStatus = (TextView) findViewById(R.id.statusDtDr);
+
+
+
 
         Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_dtdiri");
@@ -70,6 +79,13 @@ public class DataDiri extends AppCompatActivity {
                         String jenisKelamin = c.getString("jenisKelamin");
                         String alamat = c.getString("alamat");
                         String kotaAsal = c.getString("kotaAsal");
+                        String angkatan = c.getString("angkatan");
+                        String prodi = c.getString("prodi");
+                        String kelas = c.getString("kelas");
+                        String noHp = c.getString("noHp");
+                        String kota = c.getString("kota");
+                        String status = c.getString("status");
+
                         HashMap<String, String> resultx = new HashMap<>();
                         txtNIK.setText(nik);
                         txtNama.setText(namaLengkap);
@@ -78,6 +94,12 @@ public class DataDiri extends AppCompatActivity {
                         txtJk.setText(jenisKelamin);
                         txtAlamat.setText(alamat);
                         txtAsal.setText(kotaAsal);
+                        txtAngkatan.setText(angkatan);
+                        txtProdi.setText(prodi);
+                        txtKelas.setText(kelas);
+                        txtNo.setText(noHp);
+                        txtKota.setText(kota);
+                        txtStatus.setText(status);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -105,15 +127,6 @@ public class DataDiri extends AppCompatActivity {
         requestQueue.add(request);
 
 
-
-        Button btnback = (Button) findViewById(R.id.btn_backdtdr);
-        btnback.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DataDiri.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
     }
 }

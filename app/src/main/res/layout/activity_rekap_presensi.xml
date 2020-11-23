@@ -61,14 +61,6 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
-    <Button
-        android:id="@+id/btn_backdtdr"
-        android:layout_width="20dp"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="20dp"
-        android:background="@android:color/transparent"
-        android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -101,143 +93,161 @@
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/statusRekap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/roundorg"
         android:fontFamily="@font/ubunturegular"
-        android:text=" AKTIF "
+        android:text=""
         android:textColor="@android:color/white"
         android:textSize="14dp"
         android:textStyle="bold" />
 </LinearLayout>
 
-<RelativeLayout
-    android:id="@+id/relativeLayout2"
-    android:layout_width="0dp"
-    android:layout_height="72dp"
-    android:background="@color/white"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-    app:layout_constraintVertical_bias=".023"
-    app:layout_constraintWidth_percent=".9">
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/relativeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias=".023"
+        app:layout_constraintWidth_percent=".9">
 
-    <View
-        android:id="@+id/garis"
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        android:background="#DDDDDD" />
+        <View
+            android:id="@+id/garis"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:background="#DDDDDD" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_person_16"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="NPM : "
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_person_16"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text="NPM : "
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:id="@+id/NPM3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="7dp"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="193307068"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:id="@+id/NPM3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="7dp"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:id="@+id/angkatan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/NPM3"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_verified_user_24"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="Angkatan 2019"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:id="@+id/angkatanRekap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NPM3"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_verified_user_24"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:id="@+id/prodi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/angkatan"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_flag_16"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="D-III Teknologi Informasi"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:id="@+id/prodiRekap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/angkatanRekap"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_flag_16"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:layout_width="98dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/angkatan"
-        android:layout_alignStart="@+id/garis"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_location_on_24"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="Kota Madiun"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:id="@+id/kotaRekap"
+            android:layout_width="98dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/angkatanRekap"
+            android:layout_alignStart="@+id/garis"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/NPM3"
-        android:layout_alignStart="@+id/garis"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_local_phone_24"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="0895329990656"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
+        <TextView
+            android:id="@+id/noRekap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NPM3"
+            android:layout_alignStart="@+id/garis"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_local_phone_24"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/garis"
-        android:layout_marginStart="6dp"
-        android:layout_marginTop="4dp"
-        android:drawableLeft="@drawable/ic_baseline_people_alt_24"
-        android:drawablePadding="6dp"
-        android:fontFamily="@font/ubunturegular"
-        android:gravity="center_vertical"
-        android:text="Kelas 3C"
-        android:textAlignment="gravity"
-        android:textColor="@android:color/black"
-        android:textSize="11dp" />
-</RelativeLayout>
+        <TextView
+            android:id="@+id/kelas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/garis"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_baseline_people_alt_24"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text="Kelas"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/kelasRekap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/kelas"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+    </RelativeLayout>
 
 <LinearLayout
     android:id="@+id/linearLayout2"

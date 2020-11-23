@@ -59,14 +59,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/btn_backdtdr"
-            android:layout_width="20dp"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:background="@android:color/transparent"
-            android:drawableStart="@drawable/ic_baseline_arrow_back_ios_24" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -99,13 +91,15 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/statusDtOrtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
             android:background="@drawable/roundorg"
             android:fontFamily="@font/ubunturegular"
-            android:text=" AKTIF "
+            android:text=""
             android:textColor="@android:color/white"
             android:textSize="14dp"
             android:textStyle="bold" />
@@ -154,13 +148,13 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="193307068"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/angkatan"
+            android:id="@+id/angkatanDtOrtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/NPM2"
@@ -169,30 +163,31 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="Angkatan 2019"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/prodi"
+            android:id="@+id/prodiDtOrtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/angkatan"
+            android:layout_below="@+id/angkatanDtOrtu"
             android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_baseline_flag_16"
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="D-III Teknologi Informasi"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/kotaDtOrtu"
             android:layout_width="98dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/angkatan"
+            android:layout_below="@+id/angkatanDtOrtu"
             android:layout_alignStart="@+id/garis"
             android:layout_marginStart="6dp"
             android:layout_marginTop="4dp"
@@ -200,12 +195,13 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="Kota Madiun"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/noDtOrtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/NPM2"
@@ -216,12 +212,13 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="0895329990656"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/kelas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/garis"
@@ -231,7 +228,22 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="Kelas 3C"
+            android:text="Kelas"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/kelasDtOrtu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/kelas"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />
@@ -258,11 +270,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/namaAyahDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
-
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -293,10 +305,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/pekerjaanAyahDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -327,10 +340,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/instansiAyahDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -361,10 +375,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/namaIbuDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -396,10 +411,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/pekerjaanIbuDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -430,10 +446,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/instansiIbuDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -464,10 +481,11 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/namaWaliDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 
@@ -478,6 +496,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout9"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -497,10 +516,45 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/pekerjaanWaliDtOrtu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
-            android:text="NIK Siswa"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#454649" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Perusahaan / Instansi (Opsional)"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/instansiWaliDtOrtu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text=""
             android:textColor="@android:color/black"
             android:textSize="14dp" />
 

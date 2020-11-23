@@ -11,6 +11,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link HomeFragment#newInstance} factory method to
@@ -19,7 +34,8 @@ import android.widget.TextView;
 public class HomeFragment extends Fragment {
 
     public static String KEY_ACTIVITY = "msg_activity";
-    TextView txtuser;
+    TextView txtuser, txtNamaHome;
+    String url = "https://pajuts.000webhostapp.com/readbynpm.php";
 
 
 
@@ -71,8 +87,50 @@ public class HomeFragment extends Fragment {
 
 
         txtuser = (TextView) view.findViewById(R.id.txtuser);
-        String getArgument = getArguments().getString("npm");
+        txtNamaHome = (TextView) view.findViewById(R.id.txtNamaHome);
+        final String getArgument = getArguments().getString("npm");
         txtuser.setText(getArgument);
+
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                String s = response;
+                try {
+                    JSONObject jsonObject = new JSONObject(s);
+                    JSONArray a = jsonObject.getJSONArray("result");
+                    for (int i = 0; i < a.length(); i++) {
+                        JSONObject c = a.getJSONObject(i);
+                        String namaLengkap = c.getString("namaLengkap");
+
+                        HashMap<String, String> resultx = new HashMap<>();
+                        txtNamaHome.setText(namaLengkap);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("npm", getArgument);
+                return params;
+
+            }
+        };
+
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(request);
+
 
         Button btndtdiri = (Button) view.findViewById(R.id.btndtdiri);
         Button btndtortu = (Button) view.findViewById(R.id.btndtortu);
