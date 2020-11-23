@@ -12,17 +12,19 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:orientation="vertical">
+
         <Button
+            android:id="@+id/btnLms"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:drawableTop="@drawable/ic_lmst1"
             android:background="@android:color/transparent"
-            android:drawableTop="@drawable/ic_jadwalt1"
-            android:text="Jadwal Kuliah"
+            android:text="LMS"
+            android:drawableTint="@android:color/black"
             android:textAllCaps="false"
             android:textAlignment="center"
-            android:layout_marginBottom="20dp"
             tools:ignore="RtlCompat"
-            android:drawableTint="@android:color/black"
+            android:layout_marginBottom="20dp"
             android:gravity="top"/>
 
         <Button
@@ -36,6 +38,7 @@
             android:textAlignment="center"
             tools:ignore="RtlCompat"
             android:gravity="top"/>
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -47,14 +50,14 @@
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:drawableTop="@drawable/ic_presensit1"
             android:background="@android:color/transparent"
-            android:text="Presensi Kuliah"
-            android:drawableTint="@android:color/black"
+            android:drawableTop="@drawable/ic_jadwalt1"
+            android:text="Jadwal Kuliah"
             android:textAllCaps="false"
             android:textAlignment="center"
-            tools:ignore="RtlCompat"
             android:layout_marginBottom="20dp"
+            tools:ignore="RtlCompat"
+            android:drawableTint="@android:color/black"
             android:gravity="top"/>
     </LinearLayout>
     <LinearLayout

@@ -111,29 +111,31 @@ public class MainActivity extends AppCompatActivity {
         });
         navigationView.setSelectedItemId(R.id.home);
     }
-}
-class Tab_adapter extends FragmentStatePagerAdapter{
-    int jumlahTab;
-    public Tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
-        super(fm);
-        this.jumlahTab=jmlTab;
-    }
-    @NonNull
-    @Override
-    public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                tabKuliah tabKuliah =new tabKuliah();
-                return tabKuliah;
-            case 1:
-                tabKuesioner tabKuesioner =new tabKuesioner();
-                return tabKuesioner;
+
+    class Tab_adapter extends FragmentStatePagerAdapter{
+        int jumlahTab;
+        public Tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
+            super(fm);
+            this.jumlahTab=jmlTab;
         }
-        return null;
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    tabKuliah tabKuliah =new tabKuliah();
+                    return tabKuliah;
+                case 1:
+                    tabKuesioner tabKuesioner =new tabKuesioner();
+                    return tabKuesioner;
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return jumlahTab;
+        }
     }
 
-    @Override
-    public int getCount() {
-        return jumlahTab;
-    }
 }
