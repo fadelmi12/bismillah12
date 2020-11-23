@@ -86,14 +86,16 @@ public class MainActivity extends AppCompatActivity {
                     layout_tab.setVisibility(View.VISIBLE);
                     frameLayout.setVisibility(View.GONE);
                     KuliahFragment fragment = new KuliahFragment();
+                    fragment.setArguments(bundle);
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
                 }
-                if (id == R.id.profile){
+                if (id == R.id.setting){
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     SettingFragment fragment = new SettingFragment();
+                    fragment.setArguments(bundle);
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     WisudaFragment fragment = new WisudaFragment();
+                    fragment.setArguments(bundle);
                     FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.frame_layout, fragment);
                     fragmentTransaction.commit();

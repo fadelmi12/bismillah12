@@ -16,7 +16,7 @@
         android:iconTint="@android:color/black"
         android:title="Wisuda"/>
     <item
-        android:id="@+id/profile"
+        android:id="@+id/setting"
         android:icon="@drawable/ic_baseline_settings_24"
         android:iconTint="@android:color/black"
         android:title="Setting"/>

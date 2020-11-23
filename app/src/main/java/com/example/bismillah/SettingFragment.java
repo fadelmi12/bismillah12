@@ -67,7 +67,10 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
-        npmSetting = (EditText) view.findViewById(R.id.npmSetting);
+        npmSetting = (EditText) view.findViewById(R.id.NpmSetting);
+        String getArgument = getArguments().getString("npm");
+        npmSetting.setText(getArgument);
+
         pass1 = (EditText) view.findViewById(R.id.passSetting);
         showPass = (CheckBox) view.findViewById(R.id.showPass);
 

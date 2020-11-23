@@ -49,7 +49,7 @@ android:background="@color/white">
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/npmSetting"
+            android:id="@+id/NpmSetting"
             android:editable="false"
             android:layout_marginLeft="-4dp"
             android:paddingTop="2dp"
