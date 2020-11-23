@@ -146,7 +146,7 @@
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/NPM"
+            android:id="@+id/NPM2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -163,7 +163,7 @@
             android:id="@+id/angkatan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NPM"
+            android:layout_below="@+id/NPM2"
             android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_baseline_verified_user_24"
             android:drawablePadding="6dp"
@@ -208,7 +208,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NPM"
+            android:layout_below="@+id/NPM2"
             android:layout_alignStart="@+id/garis"
             android:layout_marginStart="6dp"
             android:layout_marginTop="4dp"

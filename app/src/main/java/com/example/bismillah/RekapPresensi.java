@@ -8,24 +8,24 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class DataOrtu extends AppCompatActivity {
+public class RekapPresensi extends AppCompatActivity {
     String npm;
     TextView txtNPM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_data_ortu);
+        setContentView(R.layout.activity_rekap_presensi);
 
-        txtNPM = (TextView) findViewById(R.id.NPM2);
+        txtNPM = (TextView) findViewById(R.id.NPM3);
         Bundle extras = getIntent().getExtras();
-        npm = extras.getString("NPM_dtortu");
+        npm = extras.getString("NPM_rekapPresensi");
         txtNPM.setText(npm);
         Button btnback = (Button) findViewById(R.id.btn_backdtdr);
         btnback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DataOrtu.this, MainActivity.class);
+                Intent intent = new Intent(RekapPresensi.this, MainActivity.class);
                 startActivity(intent);
             }
         });
