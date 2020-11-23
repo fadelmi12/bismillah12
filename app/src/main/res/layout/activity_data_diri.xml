@@ -260,6 +260,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/nikDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -295,6 +296,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/namaDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -329,6 +331,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/lahirDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -363,6 +366,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/jkDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -398,6 +402,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/agamaDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -432,6 +437,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/alamatDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
@@ -465,6 +471,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/asalDtDr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubunturegular"
