@@ -4,9 +4,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.EditText;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +18,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class SettingFragment extends Fragment {
+    private EditText pass1, npmSetting;
+    private CheckBox showPass;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +65,23 @@ public class SettingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false);
+        View view = inflater.inflate(R.layout.fragment_setting, container, false);
+
+        npmSetting = (EditText) view.findViewById(R.id.npmSetting);
+        pass1 = (EditText) view.findViewById(R.id.passSetting);
+        showPass = (CheckBox) view.findViewById(R.id.showPass);
+
+        showPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (showPass.isChecked()){
+                    pass1.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    pass1.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
+
+        return view;
     }
 }

@@ -1,16 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SettingFragment">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".SettingFragment"
+android:background="@color/white">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile Fragment"
-        android:gravity="center"
-        android:layout_centerInParent="true"
-        android:textSize="36dp"/>
+        android:layout_height="0dp"
+        android:background="@color/ungu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Setting"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+    </RelativeLayout>
 
-</RelativeLayout>
+    <LinearLayout
+        android:paddingTop="50dp"
+        android:id="@+id/layoutNPM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="NPM"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/npmSetting"
+            android:editable="false"
+            android:layout_marginLeft="-4dp"
+            android:paddingTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="NPM Siswa"
+            android:inputType="none"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/latoutNama"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNPM"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Nama Mahasiswa"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:editable="false"
+            android:layout_marginLeft="-4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Nama Siswa"
+            android:inputType="none"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutPass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latoutNama"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Password"
+            android:textColor="@android:color/black"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/passSetting"
+            app:passwordToggleEnabled="true"
+            android:inputType="textPassword"
+            android:layout_marginLeft="-4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubunturegular"
+            android:paddingTop="2dp"
+            android:hint="Password"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+        <CheckBox
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="-10dp"
+            android:id="@+id/showPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Password" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
