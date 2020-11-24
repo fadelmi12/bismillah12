@@ -135,6 +135,7 @@ public class HomeFragment extends Fragment {
         Button btndtdiri = (Button) view.findViewById(R.id.btndtdiri);
         Button btndtortu = (Button) view.findViewById(R.id.btndtortu);
         Button btnRekapPresensi = (Button) view.findViewById(R.id.btn_rekappresensi);
+        Button btnHasilStudi = (Button) view.findViewById(R.id.btnHasilStudi);
         btndtdiri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,6 +160,13 @@ public class HomeFragment extends Fragment {
                 String npm = txtuser.getText().toString();
                 Intent intent = new Intent(getActivity(), RekapPresensi.class);
                 intent.putExtra("NPM_rekapPresensi", npm);
+                startActivity(intent);
+            }
+        });
+        btnHasilStudi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HasilStudi.class);
                 startActivity(intent);
             }
         });

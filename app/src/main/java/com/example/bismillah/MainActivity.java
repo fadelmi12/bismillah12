@@ -46,8 +46,6 @@ public class MainActivity extends AppCompatActivity {
         npm = extras.getString(KEY_NPM);
         masterNPM.setText(npm);
 
-
-
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -72,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString("npm", npmOut);
                 if (id == R.id.home){
-
                     layout_tab.setVisibility(View.GONE);
                     frameLayout.setVisibility(View.VISIBLE);
                     HomeFragment fragment = new HomeFragment();
