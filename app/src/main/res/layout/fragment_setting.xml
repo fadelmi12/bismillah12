@@ -49,7 +49,7 @@ android:background="@color/white">
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/NpmSetting"
+            android:id="@+id/npmSetting"
             android:editable="false"
             android:layout_marginLeft="-4dp"
             android:paddingTop="2dp"
@@ -63,7 +63,7 @@ android:background="@color/white">
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/latoutNama"
+        android:id="@+id/layoutNama"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -83,6 +83,7 @@ android:background="@color/white">
             android:textStyle="bold" />
 
         <EditText
+            android:id="@+id/namaSetting"
             android:editable="false"
             android:layout_marginLeft="-4dp"
             android:layout_width="match_parent"
@@ -103,7 +104,7 @@ android:background="@color/white">
         android:paddingTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latoutNama"
+        app:layout_constraintTop_toBottomOf="@+id/layoutNama"
         app:layout_constraintWidth_percent=".9">
 
         <TextView
@@ -116,7 +117,7 @@ android:background="@color/white">
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/passSetting"
+            android:id="@+id/passwordSetting"
             app:passwordToggleEnabled="true"
             android:inputType="textPassword"
             android:layout_marginLeft="-4dp"
@@ -127,6 +128,7 @@ android:background="@color/white">
             android:hint="Password"
             android:textColor="@android:color/black"
             android:textSize="14dp" />
+
         <CheckBox
             android:layout_marginLeft="-6dp"
             android:layout_marginTop="-10dp"
@@ -135,5 +137,15 @@ android:background="@color/white">
             android:layout_height="wrap_content"
             android:text="Show Password" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSetting"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPass" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

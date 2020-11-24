@@ -42,4 +42,5 @@ dependencies {
     implementation 'com.android.support:design:29.0.1'
     implementation 'com.android.support:recyclerview-v7:29.0.1'
     implementation 'com.android.support:cardview-v7:29.0.1'
+    implementation 'com.mobapphome.library:mah-encryptor-lib:1.0.1'
 }
