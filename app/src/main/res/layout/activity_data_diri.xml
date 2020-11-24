@@ -8,14 +8,13 @@
     android:background="@color/white">
 
     <Button
-        android:id="@+id/ubhdtortu"
+        android:id="@+id/btnUbahDtDr"
         android:layout_width="0dp"
         android:layout_height="25dp"
         android:layout_marginStart="18dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/roundcorner"
         android:drawableStart="@drawable/ic_baseline_edit_24"
-
         android:drawableTint="@color/white"
         android:fontFamily="@font/ubunturegular"
         android:text="ubah data diri"
@@ -49,7 +48,7 @@
         android:textSize="12dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ubhdtortu"
+        app:layout_constraintStart_toEndOf="@+id/btnUbahDtDr"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -258,7 +257,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ubhdtortu"
+        app:layout_constraintTop_toBottomOf="@+id/btnUbahDtDr"
         app:layout_constraintWidth_percent=".9"
         android:layout_marginTop="15dp">
 
