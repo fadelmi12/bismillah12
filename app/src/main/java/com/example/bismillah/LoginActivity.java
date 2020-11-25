@@ -31,7 +31,7 @@ import java.util.logging.Logger;
 
 public class LoginActivity extends AppCompatActivity {
     EditText txtNPM, txtPassword;
-    String url = "https://pajuts.000webhostapp.com/read.php";
+    String url = "https://pajuts.000webhostapp.com/login/read.php";
     String npm, password, isiNPM, isiPASSWORD, hasil, pnpm;
     private RequestQueue mQueue;
     private String KEY_NPM = "NPM";

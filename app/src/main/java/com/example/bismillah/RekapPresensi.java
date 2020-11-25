@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class RekapPresensi extends AppCompatActivity {
     String npm;
-    String url = "https://pajuts.000webhostapp.com/readbynpm.php";
+    String url = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
     TextView txtNPM,txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
 
     @Override

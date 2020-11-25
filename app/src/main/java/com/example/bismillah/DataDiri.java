@@ -31,7 +31,7 @@ import java.util.Map;
 public class DataDiri extends AppCompatActivity {
 
     JSONObject jsonObject;
-    String url = "https://pajuts.000webhostapp.com/readbynpm.php";
+    String url = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
     String npm, out;
     TextView txtNpm,txtNIK,txtNama,txtLahir,txtAgama,txtJk,txtAlamat,txtAsal, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
     Button btnubhdtdiri;
@@ -55,17 +55,21 @@ public class DataDiri extends AppCompatActivity {
         txtKota = (TextView) findViewById(R.id.kotaDtDr);
         txtStatus = (TextView) findViewById(R.id.statusDtDr);
         btnubhdtdiri = (Button) findViewById(R.id.btnUbahDtDr);
-        btnubhdtdiri.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DataDiri.this, ActivityUbahDataDiri.class);
-                startActivity(intent);
-            }
-        });
+
 
         Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_dtdiri");
         txtNpm.setText(npm);
+
+        btnubhdtdiri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpm.getText().toString();
+                Intent intent = new Intent(DataDiri.this, ActivityUbahDataDiri.class);
+                intent.putExtra("npmE", npm);
+                startActivity(intent);
+            }
+        });
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override

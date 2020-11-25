@@ -40,41 +40,43 @@ public class HasilStudi extends AppCompatActivity {
             }
         });
     }
-}
-class tab_adapter extends FragmentStatePagerAdapter {
-    int jumlahTab;
-    public tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
-        super(fm);
-        this.jumlahTab=jmlTab;
-    }
-    @NonNull
-    @Override
-    public Fragment getItem(int position) {
-        switch (position){
-            case 0:
-                smt1 Smt1 =new smt1();
-                return Smt1;
-            case 1:
-                smt2 Smt2 =new smt2();
-                return Smt2;
-            case 2:
-                smt3 Smt3 =new smt3();
-                return Smt3;
-            case 3:
-                smt4 Smt4 =new smt4();
-                return Smt4;
-            case 4:
-                smt5 Smt5 =new smt5();
-                return Smt5;
-            case 5:
-                smt6 Smt6 =new smt6();
-                return Smt6;
+
+    class tab_adapter extends FragmentStatePagerAdapter {
+        int jumlahTab;
+        public tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
+            super(fm);
+            this.jumlahTab=jmlTab;
         }
-        return null;
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0:
+                    smt1 Smt1 =new smt1();
+                    return Smt1;
+                case 1:
+                    smt2 Smt2 =new smt2();
+                    return Smt2;
+                case 2:
+                    smt3 Smt3 =new smt3();
+                    return Smt3;
+                case 3:
+                    smt4 Smt4 =new smt4();
+                    return Smt4;
+                case 4:
+                    smt5 Smt5 =new smt5();
+                    return Smt5;
+                case 5:
+                    smt6 Smt6 =new smt6();
+                    return Smt6;
+            }
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return jumlahTab;
+        }
     }
 
-    @Override
-    public int getCount() {
-        return jumlahTab;
-    }
 }

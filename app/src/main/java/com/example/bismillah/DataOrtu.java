@@ -27,8 +27,8 @@ import java.util.Map;
 public class DataOrtu extends AppCompatActivity {
     String npm;
 
-    String url1 = "https://pajuts.000webhostapp.com/readbynpm.php";
-    String url2 = "https://pajuts.000webhostapp.com/readortubynpm.php";
+    String url1 = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
+    String url2 = "https://pajuts.000webhostapp.com/dtortu/readortubynpm.php";
     TextView txtNPM,txtNamaA,txtNamaI,txtNamaW,txtPekerjaanA,txtPekerjaanI,txtPekerjaanW,txtPerusahaanA, txtPerusahaanI, txtPerusahaanW, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
 
     @Override

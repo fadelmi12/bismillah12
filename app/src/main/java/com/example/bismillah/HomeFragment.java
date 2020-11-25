@@ -35,7 +35,7 @@ public class HomeFragment extends Fragment {
 
     public static String KEY_ACTIVITY = "msg_activity";
     TextView txtuser, txtNamaHome;
-    String url = "https://pajuts.000webhostapp.com/readbynpm.php";
+    String url = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
 
 
 

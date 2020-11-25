@@ -47,8 +47,8 @@ public class SettingFragment extends Fragment {
     String namaSetting2, passwordSetting2, npmSetting2;
     private CheckBox showPass;
     Button btnSetting;
-    String url1 = "https://pajuts.000webhostapp.com/readloginbynpm.php";
-    String url2 = "https://pajuts.000webhostapp.com/editlogin.php";
+    String url1 = "https://pajuts.000webhostapp.com/login/readloginbynpm.php";
+    String url2 = "https://pajuts.000webhostapp.com/login/editlogin.php";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -182,7 +182,6 @@ public class SettingFragment extends Fragment {
                     @Override
                     public void onResponse(String response) {
                         String s = response;
-                        String berhasil = "Password Berhasil Diubah";
                         try {
                             JSONObject jsonObject = new JSONObject(s);
                             JSONArray a = jsonObject.getJSONArray("result");
@@ -194,7 +193,6 @@ public class SettingFragment extends Fragment {
                                 npmSetting.setText(npm);
                                 namaSetting.setText(nama);
                                 passwordSetting.setText("");
-                                Toast.makeText(getActivity(), berhasil, Toast.LENGTH_SHORT).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -224,6 +222,8 @@ public class SettingFragment extends Fragment {
                 FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
                 fragmentTransaction.detach(SettingFragment.this).attach(SettingFragment.this).commit();
                 passwordSetting.setText("");
+                String berhasil = "Password Berhasil Diubah";
+                Toast.makeText(getActivity(), berhasil, Toast.LENGTH_SHORT).show();
                 RequestQueue requestQ = Volley.newRequestQueue(getActivity());
                 requestQ.add(stringRequest);
             }
