@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityUbahDataDiri"></activity>
+        <activity android:name=".ActivityUbahDataOrtu"></activity>
+        <activity android:name=".ActivityUbahDataDiri" />
         <activity android:name=".activityLms" />
         <activity android:name=".RekapPresensi" />
         <activity android:name=".DataOrtu" />
         <activity android:name=".DataDiri" />
         <activity android:name=".RegistrasiActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".HasilStudi"/>
+        <activity android:name=".HasilStudi" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

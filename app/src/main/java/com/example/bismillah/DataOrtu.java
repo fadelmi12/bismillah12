@@ -26,7 +26,7 @@ import java.util.Map;
 
 public class DataOrtu extends AppCompatActivity {
     String npm;
-
+    Button btnubhdtortu;
     String url1 = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
     String url2 = "https://pajuts.000webhostapp.com/dtortu/readortubynpm.php";
     TextView txtNPM,txtNamaA,txtNamaI,txtNamaW,txtPekerjaanA,txtPekerjaanI,txtPekerjaanW,txtPerusahaanA, txtPerusahaanI, txtPerusahaanW, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
@@ -53,10 +53,21 @@ public class DataOrtu extends AppCompatActivity {
         txtNo = (TextView) findViewById(R.id.noDtOrtu);
         txtKota = (TextView) findViewById(R.id.kotaDtOrtu);
         txtStatus = (TextView) findViewById(R.id.statusDtOrtu);
+        btnubhdtortu = (Button) findViewById(R.id.btnUbahDtDr);
 
         Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_dtortu");
         txtNPM.setText(npm);
+
+        btnubhdtortu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNPM.getText().toString();
+                Intent intent = new Intent(DataOrtu.this, ActivityUbahDataOrtu.class);
+                intent.putExtra("npmEOrtu", npm);
+                startActivity(intent);
+            }
+        });
 
         StringRequest request2 = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override

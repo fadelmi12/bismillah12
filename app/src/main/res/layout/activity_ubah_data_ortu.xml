@@ -1,86 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ActivityUbahDataOrtu"
+android:orientation="vertical"
+android:background="@color/white">
+<RelativeLayout
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ActivityUbahDataDiri"
-    android:orientation="vertical"
-    android:background="@color/white">
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="@color/ungu">
-        <Button
-            android:id="@+id/btn_backEDtDr"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="35dp"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:fontFamily="@font/ubunturegular"
-            android:text="Edit Data Diri"
-            android:textColor="@android:color/white"
-            android:textSize="18dp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    android:layout_height="65dp"
+    android:background="@color/ungu">
+    <Button
+        android:id="@+id/btn_backEDtDr"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="35dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/ubunturegular"
+        android:text="Edit Data Orang Tua"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+</RelativeLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/ubunturegular"
-                android:text="STATUS STUDI : "
-                android:textColor="@android:color/black"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/statusEDtDr"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/roundorg"
-                android:fontFamily="@font/ubunturegular"
-                android:paddingLeft="2dp"
-                android:paddingRight="2dp"
-                android:text=""
-                android:textColor="@android:color/white"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-        </LinearLayout>
 
 
         <LinearLayout
             android:id="@+id/linearLayout8"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:paddingTop="20dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintWidth_percent=".9">
+            app:layout_constraintWidth_percent=".9"
+            tools:ignore="MissingConstraints">
 
             <TextView
                 android:layout_width="match_parent"
@@ -93,7 +60,7 @@
 
             <EditText
                 android:editable="false"
-                android:id="@+id/idEDtDr"
+                android:id="@+id/idEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-4dp"
@@ -126,7 +93,7 @@
 
             <EditText
                 android:editable="false"
-                android:id="@+id/npmEDtDr"
+                android:id="@+id/npmEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-4dp"
@@ -151,17 +118,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="NIK"
+                android:text="Nama Ayah"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/nikEDtDr"
+                android:id="@+id/namaAyahEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan NIK"
+                android:hint="Masukkan Nama Ayah"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14dp"
@@ -183,17 +150,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Nama Lengkap"
+                android:text="Pekerjaan Ayah"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/namaEDtDr"
+                android:id="@+id/pekerjaanEAyahDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Nama Lengkap"
+                android:hint="Masukkan Pekerjaan Ayah"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14dp"
@@ -214,17 +181,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Lahir"
+                android:text="Instansi / Perusahaan Ayah"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/lahirEDtDr"
+                android:id="@+id/instansiAyahEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Tanggal Lahir"
+                android:hint="Masukkan Instansi / Perusahaan Ayah"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14dp"
@@ -245,18 +212,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Jenis Kelamin"
+                android:text="Nama Ibu"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
 
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/jkEDtDr"
+                android:id="@+id/namaIbuEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Jenis Kelamin"
+                android:hint="Masukkan Nama Ibu"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
@@ -278,17 +245,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Agama"
+                android:text="Pekerjaan Ibu"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/agamaEDtDr"
+                android:id="@+id/pekerjaanIbuEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Agama"
+                android:hint="Masukkan Pekerjaan Ibu"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
@@ -310,18 +277,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Alamat Asal"
+                android:text="Instansi / Perusahaan Ibu"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/alamatEDtDr"
+                android:id="@+id/instansiIbuEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
-                android:hint="Masukkan Alamat Asal"
+                android:hint="Masukkan Instansi / Perusahaan Ibu"
                 android:fontFamily="@font/ubunturegular"
                 android:textColor="@android:color/black"
                 android:textSize="14dp" />
@@ -342,17 +309,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Kota / Kab. Asal"
+                android:text="Nama Wali"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/asalEDtDr"
+                android:id="@+id/namaWaliEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Kota Asal"
+                android:hint="Masukkan Nama Wali"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
@@ -374,17 +341,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Kota / Kab. Sekarang"
+                android:text="Pekerjaan Wali"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/kotaSekarangEDtDr"
+                android:id="@+id/pekerjaanWaliEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Kota Sekarang"
+                android:hint="Masukkan Pekerjaan Wali"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
                 android:textColor="@android:color/black"
@@ -406,172 +373,41 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:text="Angkatan"
+                android:text="Instansi / Perusahaan Wali"
                 android:textColor="@android:color/black"
                 android:textSize="15dp"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/angkatanEDtDr"
+                android:id="@+id/instansiWaliEDtOrtu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Angkatan"
+                android:hint="Masukkan Instansi / Perusahaan Wali"
                 android:layout_marginLeft="-4dp"
                 android:layout_marginTop="-4dp"
-                android:textColor="@android:color/black"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout13"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout12"
-            app:layout_constraintWidth_percent=".9">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:text="Program Studi"
-                android:textColor="@android:color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/prodiEDtDr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:layout_marginLeft="-4dp"
-                android:hint="Masukkan Prodi"
-                android:layout_marginTop="-4dp"
-                android:textColor="@android:color/black"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout14"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout13"
-            app:layout_constraintWidth_percent=".9">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:text="Kelas"
-                android:textColor="@android:color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/kelasEDtDr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Kelas"
-                android:layout_marginLeft="-4dp"
-                android:layout_marginTop="-4dp"
-                android:textColor="@android:color/black"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout15"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout14"
-            app:layout_constraintWidth_percent=".9">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:text="No Hp"
-                android:textColor="@android:color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/noHpEDtDr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Masukkan Nomor HP"
-                android:inputType="phone"
-                android:layout_marginTop="-4dp"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@android:color/black"
-                android:layout_marginLeft="-4dp"
-                android:textSize="14dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayout16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout15"
-            app:layout_constraintWidth_percent=".9">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:text="Email"
-                android:textColor="@android:color/black"
-                android:textSize="15dp"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/emailEDtDr"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubunturegular"
-                android:hint="Masukkan Email"
-                android:layout_marginTop="-4dp"
-                android:inputType="textEmailAddress"
-                android:layout_marginLeft="-4dp"
                 android:textColor="@android:color/black"
                 android:textSize="14dp" />
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnsubmitEDtDr"
+            android:id="@+id/btnsubmitEDtOrtu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/roundcorner2"
-            app:layout_constraintWidth_percent=".9"
-            android:layout_marginTop="15dp"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout16"
-            android:text="Submit"
-            android:textColor="@color/white"
-            android:fontFamily="@font/ubunturegular"
-            android:textSize="16dp"
-            android:layout_marginBottom="20dp"
-            android:textStyle="bold"/>
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout12"
+            app:layout_constraintWidth_percent=".9" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
-    </LinearLayout>
+</ScrollView>
+</LinearLayout>
