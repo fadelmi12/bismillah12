@@ -128,7 +128,7 @@ public class Pengumuman extends AppCompatActivity {
         int rImgs[];
 
         MyAdapter(Context c, String title[], String description[], int imgs[]) {
-            super(c, R.layout.row, R.id.kategori, title);
+            super(c, R.layout.listview_daftarulang, R.id.kategori, title);
             this.context = c;
             this.rTitle = title;
             this.rDescription = description;
@@ -140,10 +140,10 @@ public class Pengumuman extends AppCompatActivity {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            View row = layoutInflater.inflate(R.layout.row, parent, false);
-            ImageView images = row.findViewById(R.id.image);
-            TextView myTitle = row.findViewById(R.id.kategori);
-            TextView myDescription = row.findViewById(R.id.judulPengumuman);
+            View listview_daftarulang = layoutInflater.inflate(R.layout.listview_daftarulang, parent, false);
+            ImageView images = listview_daftarulang.findViewById(R.id.image);
+            TextView myTitle = listview_daftarulang.findViewById(R.id.kategori);
+            TextView myDescription = listview_daftarulang.findViewById(R.id.judulPengumuman);
 
             // now set our resources on views
             images.setImageResource(rImgs[position]);
@@ -192,7 +192,7 @@ public class Pengumuman extends AppCompatActivity {
 
 
 
-            return row;
+            return listview_daftarulang;
         }
     }*/
 }

@@ -15,7 +15,7 @@ import com.google.android.material.tabs.TabLayout;
 public class HasilStudi extends AppCompatActivity {
     TabLayout tab;
     LinearLayout tabLayout;
-    ViewPager viewpager;
+    ViewPager viewpager2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +24,13 @@ public class HasilStudi extends AppCompatActivity {
         tabLayout = (LinearLayout)findViewById(R.id.tablayout);
         tab=(TabLayout)findViewById(R.id.tab);
         tab_adapter tab_Adapter = new tab_adapter(getSupportFragmentManager(), tab.getTabCount());
-        viewpager=(ViewPager)findViewById(R.id.viewpager);
-        viewpager.setAdapter(tab_Adapter);
-        viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
+        viewpager2=(ViewPager)findViewById(R.id.viewpager2);
+        viewpager2.setAdapter(tab_Adapter);
+        viewpager2.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
         tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                viewpager.setCurrentItem(tab.getPosition());
+                viewpager2.setCurrentItem(tab.getPosition());
             }
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {

@@ -78,6 +78,15 @@ public class tabKuliah extends Fragment {
                 startActivity(intent);
             }
         });
+        Button btndaftarUlang = (Button) view.findViewById(R.id.btndaftarulang);
+        btndaftarUlang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent  = new Intent(getActivity(), DaftarUlang.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }
