@@ -1,5 +1,6 @@
 package com.example.bismillah;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +17,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class tabKuesioner extends Fragment {
+    TextView txtNpmT2;
+    Button btnVisiMisi;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +63,22 @@ public class tabKuesioner extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_tab2, container, false);
+        txtNpmT2 = (TextView) view.findViewById(R.id.txtNpmT2);
+        final String getArgument = getArguments().getString("npm");
+        txtNpmT2.setText(getArgument);
+
+        btnVisiMisi = (Button) view.findViewById(R.id.btnVisiMisi);
+        btnVisiMisi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmT2.getText().toString();
+                Intent intent = new Intent(getActivity(), ActivityPemahaman.class);
+                intent.putExtra("NPM_VisiMisi", npm);
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tab2, container, false);
+        return view;
     }
 }

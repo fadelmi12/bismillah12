@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".tabKuesioner">
 
+    <TextView
+        android:layout_marginTop="-200dp"
+        android:id="@+id/txtNpmT2"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,6 +41,7 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnVisiMisi"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:drawableTop="@drawable/ic_visimisit2"

@@ -112,6 +112,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     class Tab_adapter extends FragmentStatePagerAdapter{
+        EditText masterNPM = (EditText) findViewById(R.id.masterNPM);
+        Bundle extras = getIntent().getExtras();
+        String npm = extras.getString(KEY_NPM);
+
         int jumlahTab;
         public Tab_adapter(@NonNull FragmentManager fm, int jmlTab) {
             super(fm);
@@ -120,12 +124,17 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment getItem(int position) {
+            npmOut = masterNPM.getText().toString();
+            Bundle bundle = new Bundle();
+            bundle.putString("npm", npm);
             switch (position){
                 case 0:
                     tabKuliah tabKuliah =new tabKuliah();
+                    tabKuliah.setArguments(bundle);
                     return tabKuliah;
                 case 1:
                     tabKuesioner tabKuesioner =new tabKuesioner();
+                    tabKuesioner.setArguments(bundle);
                     return tabKuesioner;
             }
             return null;
