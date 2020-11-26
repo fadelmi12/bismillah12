@@ -22,15 +22,21 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ActivityPemahaman extends AppCompatActivity {
     String url = "https://pajuts.000webhostapp.com/pemahaman/editpemahaman.php";
+    String url1 = "https://pajuts.000webhostapp.com/pemahaman/readpemahaman.php";
     RadioGroup rg1,rg2,rg3,rg4,rg5,rg6,rg7,rg8,rg9,rg10;
     RadioButton rb1,rb2,rb3,rb4,rb5,rb6,rb7,rb8,rb9,rb10;
     Button btnSubmitPengumuman;
-    TextView txtNpmVisiMisi;
+    String status="Terisi";
+    TextView txtNpmVisiMisi,txtstatus;
     String npm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,48 @@ public class ActivityPemahaman extends AppCompatActivity {
         rg8 = (RadioGroup) findViewById(R.id.rg8);
         rg9 = (RadioGroup) findViewById(R.id.rg9);
         rg10 = (RadioGroup) findViewById(R.id.rg10);
+        txtstatus = (TextView) findViewById(R.id.statusPemahaman);
+
+        StringRequest request = new StringRequest(Request.Method.POST, url1, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                String s = response;
+                try {
+                    JSONObject jsonObject = new JSONObject(s);
+                    JSONArray a = jsonObject.getJSONArray("result");
+                    for (int i = 0; i < a.length(); i++) {
+                        JSONObject c = a.getJSONObject(i);
+                        String npm = c.getString("npm");
+                        String status = c.getString("status");
+
+                        HashMap<String, String> resultx = new HashMap<>();
+                        txtNpmVisiMisi.setText(npm);
+                        txtstatus.setText(status);
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<String, String>();
+
+                params.put("npm", npm);
+                return params;
+
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(ActivityPemahaman.this);
+        requestQueue.add(request);
 
         btnSubmitPengumuman = (Button) findViewById(R.id.btnsubmitPengumuman);
         btnSubmitPengumuman.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +126,7 @@ public class ActivityPemahaman extends AppCompatActivity {
                 rb8 = (RadioButton) findViewById(selectedId8);
                 rb9 = (RadioButton) findViewById(selectedId9);
                 rb10 = (RadioButton) findViewById(selectedId10);
+
 
                 rb1.getText().toString().trim();
 
@@ -115,6 +164,7 @@ public class ActivityPemahaman extends AppCompatActivity {
                         params.put("jawaban8",rb8.getText().toString().trim());
                         params.put("jawaban9",rb9.getText().toString().trim());
                         params.put("jawaban10",rb10.getText().toString().trim());
+                        params.put("status",status);
                         return params;
 
                     }
