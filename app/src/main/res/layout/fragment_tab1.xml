@@ -69,6 +69,7 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnPengumuman"
             android:layout_width="wrap_content"
             android:layout_height="80dp"
             android:layout_marginBottom="20dp"

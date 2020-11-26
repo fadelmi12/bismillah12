@@ -70,6 +70,14 @@ public class tabKuliah extends Fragment {
                 startActivity(intent);
             }
         });
+        Button btnpPengumuman = (Button) view.findViewById(R.id.btnPengumuman);
+        btnpPengumuman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Pengumuman.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

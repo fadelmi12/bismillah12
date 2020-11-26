@@ -135,21 +135,23 @@
             android:text="NPM : "
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/NPM2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="4dp"
+            android:drawableEnd="@drawable/ic_baseline_person_16"
             android:drawablePadding="6dp"
+            android:drawableTint="@android:color/transparent"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp"  />
 
         <TextView
             android:id="@+id/angkatanDtOrtu"
@@ -164,7 +166,7 @@
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/prodiDtOrtu"
@@ -179,7 +181,7 @@
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/kotaDtOrtu"
@@ -196,7 +198,7 @@
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/noDtOrtu"
@@ -213,7 +215,7 @@
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/kelas"
@@ -229,22 +231,24 @@
             android:text="Kelas"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/kelasDtOrtu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
             android:layout_toEndOf="@+id/kelas"
             android:drawablePadding="6dp"
+            android:drawableTint="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_baseline_people_alt_24"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
             android:text=""
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
     </RelativeLayout>
 
     <LinearLayout

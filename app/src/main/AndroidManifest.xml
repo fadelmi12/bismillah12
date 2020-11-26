@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityUbahDataOrtu"></activity>
+        <activity android:name=".Pengumuman"></activity>
+        <activity android:name=".ActivityUbahDataOrtu" />
         <activity android:name=".ActivityUbahDataDiri" />
         <activity android:name=".activityLms" />
         <activity android:name=".RekapPresensi" />
