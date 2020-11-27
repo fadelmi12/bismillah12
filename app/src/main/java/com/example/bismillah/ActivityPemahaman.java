@@ -144,7 +144,8 @@ public class ActivityPemahaman extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(ActivityPemahaman.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        String eror="Di isi kabeh sek bro";
+                        Toast.makeText(ActivityPemahaman.this, eror, Toast.LENGTH_SHORT).show();
                     }
                 }
 

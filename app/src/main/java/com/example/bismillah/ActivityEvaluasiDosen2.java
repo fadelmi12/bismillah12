@@ -158,7 +158,8 @@ public class ActivityEvaluasiDosen2 extends AppCompatActivity {
 
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(ActivityEvaluasiDosen2.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                        String eror = "Isi Kuesioner disek broo";
+                        Toast.makeText(ActivityEvaluasiDosen2.this, eror, Toast.LENGTH_SHORT).show();
                     }
                 }
 
