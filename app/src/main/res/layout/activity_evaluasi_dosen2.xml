@@ -22,6 +22,32 @@
             android:textSize="18dp"
             android:textStyle="bold" />
     </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="NPM : "
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/npmED2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textSize="12dp" />
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -926,7 +952,7 @@
                             android:textStyle="bold" />
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="300dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="9dp"
                             android:layout_marginBottom="5dp"
@@ -947,7 +973,7 @@
                             android:textStyle="bold" />
 
                         <EditText
-                            android:layout_width="match_parent"
+                            android:layout_width="300dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="9dp"
                             android:layout_marginBottom="5dp"
@@ -971,9 +997,10 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="15dp"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout18"
-                app:layout_constraintWidth_percent=".9" />
+                app:layout_constraintWidth_percent=".9"
+                android:layout_marginBottom="15dp"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
