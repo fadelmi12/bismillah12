@@ -46,6 +46,7 @@
                     android:layout_marginBottom="10dp"
                     android:textSize="12dp"
                     android:text="NPM : "
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
                 <TextView
@@ -55,46 +56,20 @@
                     android:textSize="12dp"
                     android:layout_marginLeft="5dp"
                     android:text=""
+                    android:visibility="gone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout20"
-                tools:ignore="MissingConstraints">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Status : "
-                    android:textSize="12dp" />
-
-                <TextView
-                    android:id="@+id/statusPemahaman"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="10dp"
-                    android:text=""
-                    android:textSize="12dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout17"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintWidth_percent=".9"
                 tools:ignore="MissingConstraints">
 
@@ -106,9 +81,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
+                        android:layout_gravity="center"
                         android:fontFamily="@font/ubunturegular"
-                        android:gravity="center_vertical"
+                        android:gravity="center"
                         android:text="VISI"
                         android:textColor="@color/white"
                         android:textSize="15dp"
@@ -161,9 +136,9 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginStart="10dp"
                         android:fontFamily="@font/ubunturegular"
-                        android:gravity="center_vertical"
+                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:text="MISI"
                         android:textColor="@color/white"
                         android:textSize="15dp"
@@ -215,16 +190,40 @@
                     android:background="@drawable/roundcorner">
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
                         android:fontFamily="@font/ubunturegular"
-                        android:gravity="center_vertical"
-                        android:text="SEMUA PENGUMUMAN"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text="KUESIONER PEMAHAMAN VISI MISI"
                         android:textColor="@color/white"
                         android:textStyle="bold" />
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearLayout201"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status Pengisian Kuesioner : "
+                        android:textSize="12dp"
+                        android:fontFamily="@font/ubunturegular"/>
+
+                    <TextView
+                        android:id="@+id/statusPemahaman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text=""
+                        android:textSize="12dp"
+                        android:fontFamily="@font/ubunturegular"/>
+                </LinearLayout>
                 <HorizontalScrollView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
@@ -242,13 +241,15 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="1" />
+                                android:text="1"
+                                android:fontFamily="@font/ubunturegular"/>
 
                             <TextView
                                 android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Visi Misi PNM mudah ditemukan" />
+                                android:text="Visi Misi PNM mudah ditemukan"
+                                android:fontFamily="@font/ubunturegular"/>
 
                             <RadioGroup
                                 android:id="@+id/rg1"
@@ -259,35 +260,39 @@
 
                                 <RadioButton
                                     android:id="@+id/rSTJ1"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Sangat Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"/>
 
                                 <RadioButton
                                     android:id="@+id/rTJ1"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"/>
 
                                 <RadioButton
                                     android:id="@+id/rS1"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Setuju"
+                                    android:fontFamily="@font/ubunturegular"
                                     android:textSize="12dp" />
 
                                 <RadioButton
                                     android:id="@+id/rSJ1"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
+                                    android:fontFamily="@font/ubunturegular"
                                     android:layout_marginLeft="10dp"
                                     android:text="Sangat Setuju"
                                     android:textSize="12dp" />

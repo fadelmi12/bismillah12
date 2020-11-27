@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DaftarUlang"></activity>
+        <activity android:name=".ActivityEvaluasiDosen2"></activity>
+        <activity android:name=".ActivityEvaluasiDosen" />
+        <activity android:name=".DaftarUlang" />
         <activity android:name=".ActivityPemahaman" />
         <activity android:name=".Pengumuman" />
         <activity android:name=".ActivityUbahDataOrtu" />

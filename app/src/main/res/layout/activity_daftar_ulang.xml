@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DaftarUlang">
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -30,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:visibility="gone"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         tools:ignore="MissingConstraints">
@@ -57,10 +59,11 @@
         android:id="@+id/linearLayout21"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout20"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         app:layout_constraintWidth_percent=".9">
 
         <LinearLayout
@@ -79,11 +82,13 @@
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
         </ScrollView>
+
         <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -92,6 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -149,6 +155,7 @@
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
                     </TableRow>
+
                     <ListView
                         android:id="@+id/listViewDU"
                         android:layout_width="match_parent"

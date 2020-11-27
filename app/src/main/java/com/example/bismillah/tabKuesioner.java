@@ -18,7 +18,7 @@ import android.widget.TextView;
  */
 public class tabKuesioner extends Fragment {
     TextView txtNpmT2;
-    Button btnVisiMisi;
+    Button btnVisiMisi, btnEvalDosen;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -79,6 +79,14 @@ public class tabKuesioner extends Fragment {
             }
         });
         // Inflate the layout for this fragment
+        btnEvalDosen = (Button) view.findViewById(R.id.btnEvalDosen);
+        btnEvalDosen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ActivityEvaluasiDosen.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

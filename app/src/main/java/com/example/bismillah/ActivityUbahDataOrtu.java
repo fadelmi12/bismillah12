@@ -39,7 +39,6 @@ public class ActivityUbahDataOrtu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ubah_data_ortu);
 
-
         txtNPM = (EditText) findViewById(R.id.npmEDtOrtu);
         final Bundle extras = getIntent().getExtras();
         npm = extras.getString("npmEOrtu");
