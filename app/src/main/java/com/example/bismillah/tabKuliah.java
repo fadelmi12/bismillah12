@@ -72,6 +72,7 @@ public class tabKuliah extends Fragment {
         btnLms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(getActivity(), activityLms.class);
                 startActivity(intent);
             }

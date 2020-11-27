@@ -93,5 +93,16 @@ public class RekapPresensi extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(RekapPresensi.this);
         requestQueue.add(request);
+
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomePresensi);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNPM.getText().toString();
+                Intent intent = new Intent(RekapPresensi.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
     }
 }

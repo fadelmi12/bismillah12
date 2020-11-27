@@ -172,5 +172,17 @@ public class DataOrtu extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(DataOrtu.this);
         requestQueue.add(request);
+
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomeDtOrtu);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNPM.getText().toString();
+                Intent intent = new Intent(DataOrtu.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
+
     }
 }

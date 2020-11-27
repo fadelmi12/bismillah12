@@ -128,6 +128,17 @@ public class ActivityOrganisasi extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ActivityOrganisasi.this);
         requestQueue.add(request);
 
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomeOrganisasi);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmOrganisasi.getText().toString();
+                Intent intent = new Intent(ActivityOrganisasi.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
+
         btnTambahOrganisasi = (Button) findViewById(R.id.btnTambahOrganisasi);
         btnTambahOrganisasi.setOnClickListener(new View.OnClickListener() {
             @Override

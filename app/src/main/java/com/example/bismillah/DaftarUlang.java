@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -106,6 +109,18 @@ public class DaftarUlang extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(DaftarUlang.this);
         requestQueue.add(request);
+
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomeDaftarUlang);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmDU.getText().toString();
+                Intent intent = new Intent(DaftarUlang.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

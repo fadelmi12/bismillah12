@@ -134,6 +134,16 @@ public class DataDiri extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(DataDiri.this);
         requestQueue.add(request);
 
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomeDtDr);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpm.getText().toString();
+                Intent intent = new Intent(DataDiri.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
 
 
     }

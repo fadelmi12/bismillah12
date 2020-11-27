@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -183,6 +184,17 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(ActivityEvaluasiDosen.this);
         requestQueue.add(request);
+
+        Button btnBackHome = (Button) findViewById(R.id.btn_backHomeEval);
+        btnBackHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmEval.getText().toString();
+                Intent intent = new Intent(ActivityEvaluasiDosen.this, MainActivity.class);
+                intent.putExtra("NPM", npm);
+                startActivity(intent);
+            }
+        });
 
 
     }

@@ -173,6 +173,17 @@ public class ActivityPemahaman extends AppCompatActivity {
 
                 RequestQueue requestQueue = Volley.newRequestQueue(ActivityPemahaman.this);
                 requestQueue.add(request);
+
+                Button btnBackHome = (Button) findViewById(R.id.btn_backHomePemahaman);
+                btnBackHome.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        String npm = txtNpmVisiMisi.getText().toString();
+                        Intent intent = new Intent(ActivityPemahaman.this, MainActivity.class);
+                        intent.putExtra("NPM", npm);
+                        startActivity(intent);
+                    }
+                });
             }
         });
 
