@@ -83,7 +83,9 @@ public class tabKuesioner extends Fragment {
         btnEvalDosen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String npm = txtNpmT2.getText().toString();
                 Intent intent = new Intent(getActivity(), ActivityEvaluasiDosen.class);
+                intent.putExtra("NPM_Eval", npm);
                 startActivity(intent);
             }
         });
