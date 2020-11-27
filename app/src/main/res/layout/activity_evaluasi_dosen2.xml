@@ -23,6 +23,7 @@
             android:textStyle="bold" />
     </RelativeLayout>
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/linearLayout20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -48,6 +49,7 @@
             android:textSize="12dp" />
     </LinearLayout>
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/linearLayout21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,11 +61,36 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="NPM : "
+            android:text="Id Mata Kuliah : "
             android:textSize="12dp" />
 
         <TextView
             android:id="@+id/idMk2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text=""
+            android:textSize="12dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Status : "
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/statusEval"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -152,7 +179,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
-
+                                android:id="@+id/R1_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -220,6 +247,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R1_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -287,6 +315,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R1_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -354,6 +383,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R1_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -432,6 +462,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R2_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -499,6 +530,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R2_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -566,7 +598,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
-                                android:id="@+id/rg1"
+                                android:id="@+id/R2_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -638,6 +670,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R2_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -717,6 +750,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R3_1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -785,6 +819,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R3_2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -853,6 +888,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R3_3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -921,6 +957,7 @@
                                 android:textColor="@android:color/black" />
 
                             <RadioGroup
+                                android:id="@+id/R3_4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -976,6 +1013,8 @@
                             android:textStyle="bold" />
 
                         <EditText
+
+                            android:id="@+id/kesan"
                             android:layout_width="300dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="9dp"
@@ -997,6 +1036,7 @@
                             android:textStyle="bold" />
 
                         <EditText
+                            android:id="@+id/pesan"
                             android:layout_width="300dp"
                             android:layout_height="80dp"
                             android:layout_marginLeft="9dp"
@@ -1010,6 +1050,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btnSubmitEval"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/roundcorner2"
