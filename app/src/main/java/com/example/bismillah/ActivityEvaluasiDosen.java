@@ -1,28 +1,18 @@
 package com.example.bismillah;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -36,7 +26,6 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 public class ActivityEvaluasiDosen extends AppCompatActivity {
     ListView lvDosen;
@@ -51,12 +40,14 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
     TextView txtNpmEval, txtId;
     int images[] = {R.drawable.ic_baseline_person_24};
     ArrayList<HashMap<String, String>> JsonList;
+    ArrayList<String> data;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_evaluasi_dosen);
 
         lvDosen = (ListView)findViewById(R.id.lvdosen);
+        data = new ArrayList<>();
         JsonList = new ArrayList<>();
         txtNpmEval = (TextView) findViewById(R.id.npmDosen);
         txtId = (TextView) findViewById(R.id.tvIdDosen);
@@ -81,7 +72,7 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
                         mkDosen = c.getString("mkDosen");
 
 
-                        HashMap<String, String> resultx = new HashMap<>();
+                        final HashMap<String, String> resultx = new HashMap<>();
 
                         resultx.put("id", id);
                         resultx.put("idDosen", idDosen);
@@ -89,6 +80,7 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
                         resultx.put("mkDosen", mkDosen);
 
                         JsonList.add(resultx);
+                        data.add(id);
 
 
                         ListAdapter adapter = new SimpleAdapter(
@@ -101,6 +93,18 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
                                 );
 
                         lvDosen.setAdapter(adapter);
+
+                        lvDosen.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                String getNpm = txtNpmEval.getText().toString();
+                                String getId = data.get(position);
+                                Intent intent = new Intent(getApplicationContext(),ActivityEvaluasiDosen2.class);
+                                intent.putExtra("npmEval2", getNpm);
+                                intent.putExtra("id", getId);
+                                startActivity(intent);
+                            }
+                        });
 
 
 

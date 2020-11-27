@@ -9,7 +9,6 @@
         android:layout_height="74dp"
         android:orientation="horizontal">
         <ImageView
-            android:onClick="eval2"
             android:id="@+id/fotodosen"
             android:layout_width="60dp"
             android:layout_height="60dp"
