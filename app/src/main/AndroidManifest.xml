@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ActivityTambahBahasa"></activity>
+        <activity android:name=".ActivityTambahPrestasi"></activity>
+        <activity android:name=".ActivityPrestasi" />
+        <activity android:name=".ActivityTambahBahasa" />
         <activity android:name=".ActivityBahasa" />
         <activity android:name=".ActivityTambahOrganisasi" />
         <activity android:name=".ActivityOrganisasi" />

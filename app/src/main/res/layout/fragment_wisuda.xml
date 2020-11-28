@@ -98,6 +98,7 @@
         android:layout_below="@+id/view12"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnPrestasi"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:drawableTop="@drawable/ic_baseline_person_24"
