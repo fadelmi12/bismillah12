@@ -251,14 +251,16 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="1"
-                                android:fontFamily="@font/ubunturegular"/>
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <TextView
                                 android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
                                 android:text="Visi Misi PNM mudah ditemukan"
-                                android:fontFamily="@font/ubunturegular"/>
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <RadioGroup
                                 android:id="@+id/rg1"
@@ -317,13 +319,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="2" />
+                                android:text="2"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Visi Misi PNM dituangkan dalam media cetak maupun elektronik" />
+                                android:text="Visi Misi PNM dituangkan dalam media cetak maupun elektronik"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <RadioGroup
                                 android:id="@+id/rg2"
@@ -334,38 +340,46 @@
 
                                 <RadioButton
                                     android:id="@+id/rSTJ2"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Sangat Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rTJ2"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rS2"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rSJ2"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Sangat Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
                             </RadioGroup>
                         </TableRow>
 
@@ -378,13 +392,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="3" />
+                                android:text="3"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Visi Misi PNM disampaikan pada berbagai even kegiatan internal maupun external" />
+                                android:text="Visi Misi PNM disampaikan pada berbagai even kegiatan internal maupun external"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <RadioGroup
                                 android:id="@+id/rg3"
@@ -395,38 +413,46 @@
 
                                 <RadioButton
                                     android:id="@+id/rSTJ3"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Sangat Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rTJ3"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rS3"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rSJ3"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Sangat Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
                             </RadioGroup>
                         </TableRow>
 
@@ -439,12 +465,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="4" />
+                                android:text="4"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <TextView
-                                android:layout_width="100dp"
+                                android:layout_width="102dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"
                                 android:text="Visi Misi PNM mengandung tujuan dan sasaran jangka pendek, menengah dan panjang" />
 
                             <RadioGroup
@@ -456,36 +486,44 @@
 
                                 <RadioButton
                                     android:id="@+id/rSTJ4"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Sangat Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rTJ4"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rS4"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Setuju"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"
                                     android:textSize="12dp" />
 
                                 <RadioButton
                                     android:id="@+id/rSJ4"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"
                                     android:text="Sangat Setuju"
                                     android:textSize="12dp" />
                             </RadioGroup>
@@ -500,13 +538,17 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:text="5" />
+                                android:text="5"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <TextView
                                 android:layout_width="100dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="10dp"
-                                android:text="Visi Misi PNM bermakna menyeluruh dan saling terkait" />
+                                android:text="Visi Misi PNM bermakna menyeluruh dan saling terkait"
+                                android:fontFamily="@font/ubunturegular"
+                                android:textColor="@android:color/black"/>
 
                             <RadioGroup
                                 android:id="@+id/rg5"
@@ -517,19 +559,23 @@
 
                                 <RadioButton
                                     android:id="@+id/rSTJ5"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:text="Sangat Tidak Setuju"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"/>
 
                                 <RadioButton
                                     android:id="@+id/rTJ5"
-                                    android:layout_width="100dp"
+                                    android:layout_width="102dp"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginLeft="10dp"
                                     android:text="Tidak Setuju"
+                                    android:fontFamily="@font/ubunturegular"
+                                    android:textColor="@android:color/black"
                                     android:textSize="12dp" />
 
                                 <RadioButton

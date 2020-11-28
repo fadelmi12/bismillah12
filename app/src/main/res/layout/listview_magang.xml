@@ -13,7 +13,7 @@
             android:layout_marginStart="10dp"
             android:layout_gravity="center">
             <TextView
-                android:id="@+id/noOrganisasi"
+                android:id="@+id/noMagang"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="1"
@@ -24,47 +24,75 @@
         </LinearLayout>
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="180dp"
             android:layout_height="62dp"
-            android:id="@+id/txtNamaOrganisasi"
+            android:id="@+id/txtJudulMagang"
             android:gravity="center"
             android:textColor="@android:color/black"
-            android:text="Himpunan Mahasiswa Jurusan Teknik"
+            android:text="Sistem Pendataan di Kantor Polres Madiun"
             android:layout_gravity="center"
             android:textStyle="bold"
             android:fontFamily="@font/ubunturegular" />
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="130dp"
             android:layout_height="62dp"
-            android:id="@+id/txtMasukOrganisasi"
-            android:text="2020"
+            android:id="@+id/txtTempatMagang"
+            android:text="Kepolisian Resor Madiun Kota"
             android:layout_gravity="center"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:fontFamily="@font/ubunturegular"
             android:textStyle="bold"/>
         <TextView
-            android:layout_width="60dp"
+            android:layout_width="100dp"
             android:layout_height="62dp"
-            android:id="@+id/txtKeluarOrganisasi"
-            android:text="2021"
+            android:id="@+id/txtProvinsi"
+            android:text="Jawa Timur"
             android:layout_gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:fontFamily="@font/ubunturegular"
-            android:textStyle="bold"
-            android:layout_marginStart="15dp"/>
+            android:textStyle="bold"/>
         <TextView
             android:layout_width="100dp"
             android:layout_height="62dp"
-            android:id="@+id/txtJabatanOrganisasi"
-            android:text="Anggota Medinfo"
-            android:layout_gravity="center"
+            android:id="@+id/txtKota"
+            android:text="Kota Madiun"
+            android:layout_gravity="center_horizontal"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:fontFamily="@font/ubunturegular"
-            android:textStyle="bold"
-            android:layout_marginStart="10dp"/>
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:id="@+id/txtTanggalMulai"
+            android:text="12/06/2021"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="62dp"
+            android:id="@+id/txtTanggalSelesai"
+            android:text="13/10/2021"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="62dp"
+            android:id="@+id/txtRingkasan"
+            android:text="Kegiatan melakukan pendataan di basis data Kepolisian"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
     </LinearLayout>
 
 

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityOrganisasi">
-
+    tools:context=".ActivityKetrampilan">
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
 
 
         <Button
-            android:id="@+id/btn_backHomeOrganisasi"
+            android:id="@+id/btn_backHomeKetrampilan"
             android:layout_centerVertical="true"
             android:layout_marginLeft="35dp"
             android:layout_width="25dp"
@@ -29,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/ubunturegular"
-            android:text="Organisasi"
+            android:text="Ketrampilan"
             android:textColor="@android:color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -37,7 +36,7 @@
 
 
     <Button
-        android:id="@+id/btnTambahOrganisasi"
+        android:id="@+id/btnTambahKetrampilan"
         android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginTop="15dp"
@@ -46,10 +45,10 @@
         android:drawableTint="@color/white"
         android:fontFamily="@font/ubunturegular"
         android:gravity="center"
-        android:paddingLeft="18dp"
+        android:paddingLeft="10dp"
         android:drawablePadding="5dp"
-        android:paddingRight="18dp"
-        android:text="Tambah Organisasi"
+        android:paddingRight="10dp"
+        android:text="Tambah Ketrampilan"
         android:textColor="@color/white"
         android:textSize="12dp"
         android:textStyle="bold"
@@ -78,7 +77,7 @@
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/npmOrganisasi"
+            android:id="@+id/npmKetrampilan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -97,7 +96,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnTambahOrganisasi"
+        app:layout_constraintTop_toBottomOf="@+id/btnTambahKetrampilan"
         app:layout_constraintWidth_percent=".9">
 
         <LinearLayout
@@ -111,17 +110,11 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/ubunturegular"
                 android:gravity="center_vertical"
-                android:text="Data Organisasi"
+                android:text="Data Ketrampilan"
                 android:textColor="@color/white"
                 android:textSize="15dp"
                 android:textStyle="bold" />
         </LinearLayout>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </ScrollView>
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
@@ -145,63 +138,51 @@
                         android:background="#85C8C0">
 
                         <TextView
+                            android:id="@+id/noKetrampilan"
                             android:layout_width="25dp"
                             android:layout_height="35dp"
-                            android:fontFamily="@font/ubunturegular"
-                            android:text="No"
                             android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
                             android:gravity="center"
+                            android:text="No"
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="120dp"
+                            android:layout_width="130dp"
                             android:layout_height="35dp"
-                            android:fontFamily="@font/ubunturegular"
-                            android:text="Nama Organisasi"
-                            android:gravity="center"
                             android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Nama Ketrampilan"
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="130dp"
                             android:layout_height="35dp"
+                            android:layout_gravity="center"
                             android:fontFamily="@font/ubunturegular"
                             android:gravity="center"
-                            android:layout_gravity="left"
-                            android:layout_marginStart="-7dp"
-                            android:text="Tahun Masuk"
+                            android:text="Jenis Ketrampilan"
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
 
                         <TextView
-                            android:layout_width="70dp"
+                            android:layout_width="80dp"
                             android:layout_height="35dp"
+                            android:layout_gravity="center"
                             android:fontFamily="@font/ubunturegular"
                             android:gravity="center"
-                            android:layout_gravity="center"
-                            android:text="Tahun Keluar"
-                            android:layout_marginStart="7dp"
-                            android:textColor="@android:color/black"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="100dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/ubunturegular"
-                            android:gravity="center"
-                            android:text="Jabatan"
-                            android:layout_gravity="center"
+                            android:text="Level"
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
                     </TableRow>
-
                     <ListView
-                        android:id="@+id/listViewOrganisasi"
+                        android:id="@+id/listViewKetrampilan"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        tools:listitem="@layout/listview_organisasi" />
+                        tools:listitem="@layout/listview_ketrampilan" />
                 </TableLayout>
             </LinearLayout>
         </HorizontalScrollView>

@@ -14,6 +14,10 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".ActivityTambahPrestasi"></activity>
         <activity android:name=".ActivityPrestasi" />
+        <activity android:name=".ActivityKetrampilan" />
+        <activity android:name=".ActivityMagang" />
+        <activity android:name=".ActivityTambahKetrampilan" />
+        <activity android:name=".ActivityTambahMagang" />
         <activity android:name=".ActivityTambahBahasa" />
         <activity android:name=".ActivityBahasa" />
         <activity android:name=".ActivityTambahOrganisasi" />

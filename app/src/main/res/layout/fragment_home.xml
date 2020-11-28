@@ -130,6 +130,7 @@
             android:drawableTop="@drawable/ic_outline_emoji_nature_24"
             android:background="@android:color/transparent"
             android:text="Ketrampilan"
+            android:id="@+id/btnKetrampilan"
             android:drawableTint="@android:color/black"
             android:fontFamily="@font/ubunturegular"
             android:textAlignment="center"
@@ -161,6 +162,7 @@
         <Button
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:id="@+id/btnMagang"
             android:drawableTop="@drawable/ic_outline_business_24"
             android:background="@android:color/transparent"
             android:text="Magang / PKL"

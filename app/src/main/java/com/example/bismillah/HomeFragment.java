@@ -136,6 +136,8 @@ public class HomeFragment extends Fragment {
         Button btndtortu = (Button) view.findViewById(R.id.btndtortu);
         Button btnRekapPresensi = (Button) view.findViewById(R.id.btn_rekappresensi);
         Button btnHasilStudi = (Button) view.findViewById(R.id.btnHasilStudi);
+        Button btnKetrampilan = (Button) view.findViewById(R.id.btnKetrampilan);
+        Button btnMagang = (Button) view.findViewById(R.id.btnMagang);
         btndtdiri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -167,6 +169,24 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), HasilStudi.class);
+                startActivity(intent);
+            }
+        });
+        btnKetrampilan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtuser.getText().toString();
+                Intent intent = new Intent(getActivity(), ActivityKetrampilan.class);
+                intent.putExtra("NPM_Ketrampilan", npm);
+                startActivity(intent);
+            }
+        });
+        btnMagang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtuser.getText().toString();
+                Intent intent = new Intent(getActivity(), ActivityMagang.class);
+                intent.putExtra("NPM_Magang", npm);
                 startActivity(intent);
             }
         });
