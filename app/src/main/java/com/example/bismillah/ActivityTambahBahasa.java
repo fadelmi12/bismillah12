@@ -24,43 +24,44 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ActivityTambahOrganisasi extends AppCompatActivity {
-
+public class ActivityTambahBahasa extends AppCompatActivity {
 
     String npm;
     Button btnSubmit;
-    String snoOrganisasi,snamaOrganisasi,smasukOrganisasi,skeluarOrganisasi,sjabatanOrganisasi;
-    TextView npmOrganisasi;
-    String url = "https://pajuts.000webhostapp.com/organisasi/inputorganisasi.php";
-    EditText txtnoOrganisasi,txtnamaOrganisasi,txtmasukOrganisai,txtkeluarOrganisasi,txtjabatanOrganisasi;
+    String snoBahasa,snamaBahasa,sPeriodeBahasa,sTahunBahasa,sSkorBahasa,sTanggalBahasa;
+    TextView npmBahasa;
+    String url = "https://pajuts.000webhostapp.com/bahasa/inputbahasa.php";
+    EditText txtnoBahasa,txtnamaBahasa,txtperiodeBahasa,txttahunBahasa,txtskorBahasa,txttanggalBahasa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tambah_organisasi);
+        setContentView(R.layout.activity_tambah_bahasa);
 
 
-        npmOrganisasi = (TextView) findViewById(R.id.txtNpmOrganisasi);
+        npmBahasa = (TextView) findViewById(R.id.txtNpmBahasa);
         final Bundle extras = getIntent().getExtras();
-        npm = extras.getString("npmtor");
-        npmOrganisasi.setText(npm);
+        npm = extras.getString("npmBahasa");
+        npmBahasa.setText(npm);
 
-        txtnoOrganisasi = (EditText) findViewById(R.id.edIdNoOrganisasi);
-        txtnamaOrganisasi = (EditText) findViewById(R.id.edNamaOrganisasi);
-        txtmasukOrganisai = (EditText) findViewById(R.id.edMasukOrganisasi);
-        txtkeluarOrganisasi = (EditText) findViewById(R.id.edKeluarOrganisasi);
-        txtjabatanOrganisasi = (EditText) findViewById(R.id.edJabatanOrganisasi);
+        txtnoBahasa = (EditText) findViewById(R.id.edIdNoBahasa);
+        txtnamaBahasa = (EditText) findViewById(R.id.edNamaBahasa);
+        txtperiodeBahasa = (EditText) findViewById(R.id.edPeriodeBahasa);
+        txttahunBahasa = (EditText) findViewById(R.id.edTahunBahasa);
+        txtskorBahasa = (EditText) findViewById(R.id.edSkorBahasa);
+        txttanggalBahasa = (EditText) findViewById(R.id.edTanggalBahasa);
 
-        btnSubmit = (Button) findViewById(R.id.btnSubmitOrganisasi);
+        btnSubmit = (Button) findViewById(R.id.btnSubmitBahasa);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                snoOrganisasi = txtnoOrganisasi.getText().toString().trim();
-                snamaOrganisasi = txtnamaOrganisasi.getText().toString().trim();
-                smasukOrganisasi = txtmasukOrganisai.getText().toString().trim();
-                skeluarOrganisasi = txtkeluarOrganisasi.getText().toString().trim();
-                sjabatanOrganisasi = txtjabatanOrganisasi.getText().toString().trim();
+                snoBahasa = txtnoBahasa.getText().toString().trim();
+                snamaBahasa = txtnamaBahasa.getText().toString().trim();
+                sPeriodeBahasa = txtperiodeBahasa.getText().toString().trim();
+                sTahunBahasa = txttahunBahasa.getText().toString().trim();
+                sSkorBahasa = txtskorBahasa.getText().toString().trim();
+                sTanggalBahasa = txttanggalBahasa.getText().toString().trim();
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
@@ -74,13 +75,13 @@ public class ActivityTambahOrganisasi extends AppCompatActivity {
                                 String id = c.getString("id");
                                 String no = c.getString("no");
                                 String npm = c.getString("npm");
-                                String namaOrganisasi = c.getString("namaOrganisasi");
-                                String masuk = c.getString("masuk");
-                                String keluar = c.getString("keluar");
-                                String jabatan = c.getString("jabatan");
+                                String namaBahasa = c.getString("namaBahasa");
+                                String periode = c.getString("periode");
+                                String tahun = c.getString("tahun");
+                                String skor = c.getString("skor");
+                                String tanggal = c.getString("tanggal");
 
                                 HashMap<String, String> resultx = new HashMap<>();
-
 
                             }
                         } catch (JSONException e) {
@@ -99,22 +100,23 @@ public class ActivityTambahOrganisasi extends AppCompatActivity {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
 
-                        params.put("no", snoOrganisasi);
-                        params.put("npm", npm);
-                        params.put("namaOrganisasi", snamaOrganisasi);
-                        params.put("masuk", smasukOrganisasi);
-                        params.put("keluar", skeluarOrganisasi);
-                        params.put("jabatan", sjabatanOrganisasi);
+                        params.put("no", snoBahasa);
+                        params.put("npm",npm);
+                        params.put("namaBahasa", snamaBahasa);
+                        params.put("periode", sPeriodeBahasa);
+                        params.put("tahun", sTahunBahasa);
+                        params.put("skor", sSkorBahasa);
+                        params.put("tanggal", sTanggalBahasa);
                         return params;
 
                     }
                 };
 
-                RequestQueue requestQueue = Volley.newRequestQueue(ActivityTambahOrganisasi.this);
+                RequestQueue requestQueue = Volley.newRequestQueue(ActivityTambahBahasa.this);
                 requestQueue.add(request);
 
 
-                Intent intent = new Intent(ActivityTambahOrganisasi.this, MainActivity.class);
+                Intent intent = new Intent(ActivityTambahBahasa.this, MainActivity.class);
                 intent.putExtra("NPM", npm);
                 startActivity(intent);
             }

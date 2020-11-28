@@ -78,6 +78,7 @@
             android:drawableTint="@android:color/black"
             android:gravity="top"/>
         <Button
+            android:id="@+id/btnBahasa"
             android:layout_width="85dp"
             android:layout_height="80dp"
             android:drawableTop="@drawable/ic_hasilstudit1"

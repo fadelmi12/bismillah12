@@ -18,7 +18,7 @@ import android.widget.TextView;
  */
 public class WisudaFragment extends Fragment {
     TextView txtNpmWisuda;
-    Button btnOrganisasi;
+    Button btnOrganisasi, btnBahasa;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -76,6 +76,17 @@ public class WisudaFragment extends Fragment {
                 String npm = txtNpmWisuda.getText().toString();
                 Intent intent = new Intent(getActivity(), ActivityOrganisasi.class);
                 intent.putExtra("NPM_Organisasi", npm);
+                startActivity(intent);
+            }
+        });
+
+        btnBahasa = (Button) view.findViewById(R.id.btnBahasa);
+        btnBahasa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmWisuda.getText().toString();
+                Intent intent = new Intent(getActivity(), ActivityBahasa.class);
+                intent.putExtra("NPM_Bahasa", npm);
                 startActivity(intent);
             }
         });
