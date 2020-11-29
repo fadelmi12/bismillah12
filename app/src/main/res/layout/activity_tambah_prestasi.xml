@@ -104,7 +104,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan No 1,2,3,Dst"
+                    android:hint="Contoh : 1,2,3,.."
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -136,7 +136,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Nama Organisasi"
+                    android:hint="Contoh : Kompetisi Mobil Listrik"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -168,7 +168,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Tahun Masuk"
+                    android:hint="Contoh : 2020"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -200,7 +200,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Tahun Keluar"
+                    android:hint="Contoh : Juara 1"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -225,15 +225,24 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/edTingkatPrestasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Jabatan"
+                    android:hint="Pilih Tingkat Prestasi"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerTingkatPrestasi"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/tingkatPrestasi">
+                </Spinner>
             </LinearLayout>
 
             <LinearLayout
@@ -256,6 +265,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/edJenisPrestasi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -265,6 +275,13 @@
                     android:hint="Masukkan Jabatan"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
+                <Spinner
+                    android:id="@+id/spinnerJenisPrestasi"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/jenisPrestasi">
+                </Spinner>
             </LinearLayout>
 
 

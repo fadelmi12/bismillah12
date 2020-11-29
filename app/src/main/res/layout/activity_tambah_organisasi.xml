@@ -104,7 +104,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan No 1,2,3,Dst"
+                    android:hint="Contoh : 1,2,3,.."
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -136,7 +136,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Nama Organisasi"
+                    android:hint="Contoh : Himpunan Mahasiswa Jurusan Teknik"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -168,7 +168,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Tahun Masuk"
+                    android:hint="Contoh : 2020"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -200,7 +200,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Tahun Keluar"
+                    android:hint="Contoh : 2021"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>
@@ -231,7 +231,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Jabatan"
+                    android:hint="Contoh : Anggota Divisi PSDM"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>

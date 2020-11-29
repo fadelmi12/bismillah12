@@ -13,5 +13,12 @@
     <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
         <item name="android:fontFamily">@font/ubunturegular</item>
     </style>
+    <style name="textSpinner" parent="@android:style/Widget.Holo.DropDownItem.Spinner">
+        <item name="android:textSize">12dp</item>
+    </style>
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textColor">#FAFAFA</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 
 </resources>

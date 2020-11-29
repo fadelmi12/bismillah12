@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.android.volley.AuthFailureError;
@@ -30,6 +31,7 @@ public class ActivityTambahKetrampilan extends AppCompatActivity {
     Button btnSubmit;
     String snoKetrampilan,snamaKetrampilan,sjenisKetrampilan,slevelKetrampilan;
     TextView npmKetrampilan;
+    Spinner spinnerJenisKeterampilan;
     String url = "https://pajuts.000webhostapp.com/ketrampilan/inputketrampilan.php";
     EditText txtnoKetrampilan,txtnamaKetrampilan,txtjenisKetrampilan,txtlevelKetrampilan;
     @Override
@@ -45,6 +47,7 @@ public class ActivityTambahKetrampilan extends AppCompatActivity {
         txtnamaKetrampilan = (EditText) findViewById(R.id.edNamaKetrampilan);
         txtjenisKetrampilan = (EditText) findViewById(R.id.edJenisKetrampilan);
         txtlevelKetrampilan = (EditText) findViewById(R.id.edLevelKetrampilan);
+        spinnerJenisKeterampilan =  (Spinner) findViewById(R.id.spinnerJenisKeterampilan);
         btnSubmit = (Button) findViewById(R.id.btnSubmitKetrampilan);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +55,7 @@ public class ActivityTambahKetrampilan extends AppCompatActivity {
 
                 snoKetrampilan = txtnoKetrampilan.getText().toString().trim();
                 snamaKetrampilan = txtnamaKetrampilan.getText().toString().trim();
-                sjenisKetrampilan = txtjenisKetrampilan.getText().toString().trim();
+                sjenisKetrampilan = spinnerJenisKeterampilan.getSelectedItem().toString().trim();
                 slevelKetrampilan = txtlevelKetrampilan.getText().toString().trim();
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

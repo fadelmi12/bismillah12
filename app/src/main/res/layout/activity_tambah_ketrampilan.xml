@@ -103,7 +103,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan No 1,2,3,Dst"
+                    android:hint="Contoh : 1,2,3,.."
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -135,7 +135,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Nama Ketrampilan"
+                    android:hint="Contoh : Pemrograman Mobile Berbasis Android"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
 
@@ -161,6 +161,7 @@
                     android:textStyle="bold" />
 
                 <EditText
+                    android:visibility="gone"
                     android:id="@+id/edJenisKetrampilan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -170,6 +171,14 @@
                     android:hint="Masukkan Jenis Ketrampilan"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerJenisKeterampilan"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:entries="@array/jenisKeterampilan">
+                </Spinner>
             </LinearLayout>
 
             <LinearLayout
@@ -199,7 +208,7 @@
                     android:layout_marginLeft="-4dp"
                     android:layout_marginTop="-4dp"
                     android:fontFamily="@font/ubunturegular"
-                    android:hint="Masukkan Level Ketrampilan"
+                    android:hint="Contoh : Dasar"
                     android:textColor="@android:color/black"
                     android:textSize="14dp" />
             </LinearLayout>

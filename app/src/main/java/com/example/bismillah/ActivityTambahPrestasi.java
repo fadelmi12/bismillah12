@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.PopupMenu;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -27,7 +31,8 @@ import java.util.Map;
 public class ActivityTambahPrestasi extends AppCompatActivity {
 
     String npm;
-    Button btnSubmit;
+    Spinner spinnerTingkatPrestasi,spinnerJenisPrestasi;
+    Button btnSubmit,btnDropdownTingkat;
     String snoPrestasi,snamaPrestasi,sTahunPrestasi,sJuaraPrestasi,sTingkatPrestasi,sJenisPrestasi;
     TextView npmPrestasi;
     String url = "https://pajuts.000webhostapp.com/prestasi/inputprestasi.php";
@@ -47,8 +52,11 @@ public class ActivityTambahPrestasi extends AppCompatActivity {
         txtnamaPrestasi = (EditText) findViewById(R.id.edNamaPrestasi);
         txttahunPrestasi = (EditText) findViewById(R.id.edTahunPrestasi);
         txtjuaraPrestasi = (EditText) findViewById(R.id.edJuaraPrestasi);
-        txttingkatPrestasi = (EditText) findViewById(R.id.edTingkatPrestasi);
-        txtjenisPrestasi = (EditText) findViewById(R.id.edJenisPrestasi);
+        spinnerTingkatPrestasi =  (Spinner) findViewById(R.id.spinnerTingkatPrestasi);
+        spinnerJenisPrestasi =  (Spinner) findViewById(R.id.spinnerJenisPrestasi);
+        //txttingkatPrestasi = (EditText) findViewById(R.id.edTingkatPrestasi);
+        //txtjenisPrestasi = (EditText) findViewById(R.id.edJenisPrestasi);
+
 
         btnSubmit = (Button) findViewById(R.id.btnSubmitPrestasi);
         btnSubmit.setOnClickListener(new View.OnClickListener() {
@@ -60,8 +68,8 @@ public class ActivityTambahPrestasi extends AppCompatActivity {
                 snamaPrestasi = txtnamaPrestasi.getText().toString().trim();
                 sTahunPrestasi = txttahunPrestasi.getText().toString().trim();
                 sJuaraPrestasi = txtjuaraPrestasi.getText().toString().trim();
-                sTingkatPrestasi = txttingkatPrestasi.getText().toString().trim();
-                sJenisPrestasi = txtjenisPrestasi.getText().toString().trim();
+                sTingkatPrestasi = spinnerTingkatPrestasi.getSelectedItem().toString().trim();
+                sJenisPrestasi = spinnerJenisPrestasi.getSelectedItem().toString().trim();
 
                 StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override

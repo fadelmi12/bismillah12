@@ -93,4 +93,24 @@
     </string>
     <string name="Misi">Sebagai upaya untuk mewujudkan visi tersebut di atas, maka misi Politeknik Negeri Madiun:\n\n1. Meningkatkan akses dalam penyelenggaraan Pendidikan Vokasi yang relevan, inovatif, dan berkualitas untuk menghasilkan lulusan yang berdaya saing nasional\n\n2. Meningkatkan kapasitas penelitian terapan dan pengabdian kepada masyarakat yang bermanfaat bagi ilmu pengetahuan dan teknologi dan kesejahteraan masyarakat\n\n3. Meningkatkan penguatan kerja sama dalam mendukung keberlanjutan pemanfaatan sumber daya manusia terampil\n\n4. Mewujudkan tata kelola perguruan tinggi yang baik
         </string>
+
+        <string-array name="tingkatPrestasi">
+            <item>- Pilih Tingkat Kejuaraan -</item>
+            <item>Lokal</item>
+            <item>Regional</item>
+            <item>Nasional</item>
+            <item>Internasional</item>
+        </string-array>
+
+    <string-array name="jenisPrestasi">
+        <item>- Pilih Jenis Kejuaraan -</item>
+        <item>Individu</item>
+        <item>Kelompok</item>
+    </string-array>
+
+    <string-array name="jenisKeterampilan">
+        <item>- Pilih Jenis Keterampilan -</item>
+        <item>Teknis/Akademis (Hardskill)</item>
+        <item>Non Teknis/Non Akademis (Softskill)</item>
+    </string-array>
 </resources>
