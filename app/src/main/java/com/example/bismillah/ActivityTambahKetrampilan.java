@@ -30,7 +30,7 @@ public class ActivityTambahKetrampilan extends AppCompatActivity {
     Button btnSubmit;
     String snoKetrampilan,snamaKetrampilan,sjenisKetrampilan,slevelKetrampilan;
     TextView npmKetrampilan;
-    String url = "https://pajuts.000webhostapp.com/ketrampilan/inputorganisasi.php";
+    String url = "https://pajuts.000webhostapp.com/ketrampilan/inputketrampilan.php";
     EditText txtnoKetrampilan,txtnamaKetrampilan,txtjenisKetrampilan,txtlevelKetrampilan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,8 +89,8 @@ public class ActivityTambahKetrampilan extends AppCompatActivity {
                     protected Map<String, String> getParams() throws AuthFailureError {
                         Map<String, String> params = new HashMap<String, String>();
 
-                        params.put("no", snoKetrampilan);
                         params.put("npm",npm);
+                        params.put("no", snoKetrampilan);
                         params.put("namaKetrampilan", snamaKetrampilan);
                         params.put("jenisKetrampilan", sjenisKetrampilan);
                         params.put("levelKetrampilan", slevelKetrampilan);

@@ -77,18 +77,20 @@
             tools:ignore="RtlCompat"
             android:drawableTint="@android:color/black"
             android:gravity="top"/>
+
         <Button
+            android:textSize="13dp"
             android:id="@+id/btnBahasa"
-            android:layout_width="85dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:drawableTop="@drawable/ic_hasilstudit1"
             android:background="@android:color/transparent"
-            android:text="Bahasa Internasional"
+            android:drawableTop="@drawable/ic_hasilstudit1"
             android:drawableTint="@android:color/black"
-            android:textAllCaps="false"
+            android:gravity="top"
+            android:text="Bahasa Internasional"
             android:textAlignment="center"
-            tools:ignore="RtlCompat"
-            android:gravity="top"/>
+            android:textAllCaps="false"
+            tools:ignore="RtlCompat" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

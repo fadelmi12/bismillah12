@@ -30,7 +30,7 @@
         <activity android:name=".ActivityUbahDataOrtu" />
         <activity android:name=".ActivityUbahDataDiri" />
         <activity android:name=".activityLms" />
-        <activity android:name=".RekapPresensi" />
+        <activity android:name=".ActivityRekapPresensi" />
         <activity android:name=".DataOrtu" />
         <activity android:name=".DataDiri" />
         <activity android:name=".RegistrasiActivity" />

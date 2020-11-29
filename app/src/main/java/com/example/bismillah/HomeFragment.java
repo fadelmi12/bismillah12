@@ -160,7 +160,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 String npm = txtuser.getText().toString();
-                Intent intent = new Intent(getActivity(), RekapPresensi.class);
+                Intent intent = new Intent(getActivity(), ActivityRekapPresensi.class);
                 intent.putExtra("NPM_rekapPresensi", npm);
                 startActivity(intent);
             }
