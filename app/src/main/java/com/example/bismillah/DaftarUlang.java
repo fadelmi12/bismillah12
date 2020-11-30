@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -34,6 +35,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class DaftarUlang extends AppCompatActivity {
@@ -47,7 +49,7 @@ public class DaftarUlang extends AppCompatActivity {
     private static final int progress_bar_type = 0;
     private ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> JsonList;
-    ImageButton downloadDU;
+    List<DataDiri> mDataDiriList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,27 +62,9 @@ public class DaftarUlang extends AppCompatActivity {
         final Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_DU");
         String url1 = "https://pajuts.000webhostapp.com/KRS_"+npm;
-        downloadDU = (ImageButton) findViewById(R.id.downloadDU);
         txtNpmDU.setText(npm);
 
 
-
-        /*downloadDU.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                Uri uri = Uri.parse("https://pajuts.000webhostapp.com/KRS_"+npm+".pdf");
-
-                DownloadManager.Request request = new DownloadManager.Request(uri);
-                request.setTitle("My File");
-                request.setDescription("Downloading");
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                request.setVisibleInDownloadsUi(false);
-                request.setDestinationUri(Uri.parse("file://" + "Download" + "/KRS.pdf"));
-
-                downloadmanager.enqueue(request);
-            }
-        });*/
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -108,6 +92,8 @@ public class DaftarUlang extends AppCompatActivity {
                                 new String[]{"no","tahunAjaran","ukt","status"},
                                 new int[]{R.id.no,R.id.txtTahunAjaranDU,R.id.txtUktDU,R.id.txtStatusDU});
                         listView.setAdapter(adapter);
+
+                        listView.getSelectedItem();
                         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -115,12 +101,11 @@ public class DaftarUlang extends AppCompatActivity {
                                 Uri uri = Uri.parse("https://pajuts.000webhostapp.com/KRS_"+npm+".pdf");
 
                                 DownloadManager.Request request = new DownloadManager.Request(uri);
-                                request.setTitle("My File");
+                                request.setTitle("KRS.pdf");
                                 request.setDescription("Downloading");
                                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                                 request.setVisibleInDownloadsUi(false);
-                                request.setDestinationUri(Uri.parse("file://" + "Download" + "/KRS.pdf"));
-
+                                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"KRS.pdf");
                                 downloadmanager.enqueue(request);
                             }
                         });
@@ -149,6 +134,24 @@ public class DaftarUlang extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(DaftarUlang.this);
         requestQueue.add(request);
 
+
+        Button downloadDU = (Button) findViewById(R.id.download);
+        downloadDU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+                DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse("https://pajuts.000webhostapp.com/KRS_"+npm+".pdf");
+
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+                request.setTitle("KRS.pdf");
+                request.setDescription("Downloading");
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setVisibleInDownloadsUi(false);
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"KRS.pdf");
+                downloadmanager.enqueue(request);
+            }
+        });
+
         Button btnBackHome = (Button) findViewById(R.id.btn_backHomeDaftarUlang);
         btnBackHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,5 +165,7 @@ public class DaftarUlang extends AppCompatActivity {
 
 
     }
+
+
 
 }

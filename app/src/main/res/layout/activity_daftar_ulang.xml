@@ -34,6 +34,15 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="download"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
+
+
     <LinearLayout
         android:id="@+id/linearLayout20"
         android:layout_width="match_parent"
@@ -67,11 +76,10 @@
         android:id="@+id/linearLayout21"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/download"
         app:layout_constraintWidth_percent=".9">
 
         <LinearLayout
@@ -123,8 +131,8 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="10dp"
                             android:fontFamily="@font/ubunturegular"
-                            android:text="No"
                             android:gravity="center_vertical"
+                            android:text="No"
                             android:textColor="@android:color/black"
                             android:textStyle="bold" />
 
@@ -173,7 +181,6 @@
                 </TableLayout>
 
             </LinearLayout>
-
 
         </HorizontalScrollView>
     </LinearLayout>
