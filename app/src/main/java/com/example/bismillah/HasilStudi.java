@@ -13,32 +13,19 @@ import android.widget.LinearLayout;
 import com.google.android.material.tabs.TabLayout;
 
 public class HasilStudi extends AppCompatActivity {
-    TabLayout tab;
-    LinearLayout tabLayout;
+
+    TabLayout tab1;
+    LinearLayout tabLayout1;
     ViewPager viewpager2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hasil_studi);
-        tabLayout = (LinearLayout)findViewById(R.id.tablayout);
-        tab=(TabLayout)findViewById(R.id.tab);
-        tab_adapter tab_Adapter = new tab_adapter(getSupportFragmentManager(), tab.getTabCount());
-        viewpager2=(ViewPager)findViewById(R.id.viewpager2);
-        viewpager2.setAdapter(tab_Adapter);
-        viewpager2.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tab));
-        tab.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewpager2.setCurrentItem(tab.getPosition());
-            }
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-            }
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-            }
-        });
+
+        tabLayout1 = (LinearLayout)findViewById(R.id.tablayout1);
+        tab1=(TabLayout)findViewById(R.id.tab1);
+        tab_adapter tab_Adapter = new tab_adapter(getSupportFragmentManager(), tab1.getTabCount());
     }
 
     class tab_adapter extends FragmentStatePagerAdapter {

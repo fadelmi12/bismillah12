@@ -3,12 +3,16 @@ package com.example.bismillah;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.DownloadManager;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -39,7 +43,10 @@ public class DaftarUlang extends AppCompatActivity {
     String nomor[] = {"1","2","3","4","5","6","7","8","9","10"};
     String npm;
     private ProgressDialog progressDialog;
+    private static final int progress_bar_type = 0;
+    private ProgressDialog pDialog;
     ArrayList<HashMap<String, String>> JsonList;
+    ImageButton downloadDU;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,8 +58,28 @@ public class DaftarUlang extends AppCompatActivity {
         txtNpmDU = (TextView) findViewById(R.id.npmDU);
         final Bundle extras = getIntent().getExtras();
         npm = extras.getString("NPM_DU");
+        String url1 = "https://pajuts.000webhostapp.com/KRS_"+npm;
+        downloadDU = (ImageButton) findViewById(R.id.downloadDU);
         txtNpmDU.setText(npm);
 
+
+
+        /*downloadDU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse("https://pajuts.000webhostapp.com/KRS_"+npm+".pdf");
+
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+                request.setTitle("My File");
+                request.setDescription("Downloading");
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setVisibleInDownloadsUi(false);
+                request.setDestinationUri(Uri.parse("file://" + "Download" + "/KRS.pdf"));
+
+                downloadmanager.enqueue(request);
+            }
+        });*/
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
