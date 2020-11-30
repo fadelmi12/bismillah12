@@ -11,6 +11,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListAdapter;
@@ -94,9 +95,7 @@ public class DaftarUlang extends AppCompatActivity {
                         String tahunAjaran = c.getString("tahunAjaran");
                         String ukt = c.getString("ukt");
                         String status = c.getString("status");
-
                         HashMap<String, String> resultx = new HashMap<>();
-
                         resultx.put("no", no);
                         resultx.put("tahunAjaran", tahunAjaran);
                         resultx.put("ukt", ukt);
@@ -105,17 +104,30 @@ public class DaftarUlang extends AppCompatActivity {
                         JsonList.add(resultx);
 
                         ListAdapter adapter = new SimpleAdapter(
-
                                 DaftarUlang.this, JsonList, R.layout.listview_daftarulang,
                                 new String[]{"no","tahunAjaran","ukt","status"},
                                 new int[]{R.id.no,R.id.txtTahunAjaranDU,R.id.txtUktDU,R.id.txtStatusDU});
-
                         listView.setAdapter(adapter);
+                        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                                Uri uri = Uri.parse("https://pajuts.000webhostapp.com/KRS_"+npm+".pdf");
+
+                                DownloadManager.Request request = new DownloadManager.Request(uri);
+                                request.setTitle("My File");
+                                request.setDescription("Downloading");
+                                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                                request.setVisibleInDownloadsUi(false);
+                                request.setDestinationUri(Uri.parse("file://" + "Download" + "/KRS.pdf"));
+
+                                downloadmanager.enqueue(request);
+                            }
+                        });
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
 
             }
         }, new Response.ErrorListener() {

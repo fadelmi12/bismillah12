@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> hasilNPM = new ArrayList<HashMap<String, String>>();
     ArrayList<HashMap<String, String>> hasilPassword = new ArrayList<HashMap<String, String>>();
 
-
     public static String md5(String message) {
         String digest = null;
         try {

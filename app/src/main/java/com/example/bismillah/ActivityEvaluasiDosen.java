@@ -107,10 +107,6 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
                             }
                         });
 
-
-
-
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -127,9 +123,6 @@ public class ActivityEvaluasiDosen extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(ActivityEvaluasiDosen.this);
         requestQueue.add(request);
-
-
-
     }
 
     public void eval2 (View view) {
