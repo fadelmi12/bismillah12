@@ -5,89 +5,62 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="60dp">
         <TextView
-            android:id="@+id/txtTahunPresensi"
+            android:id="@+id/txtKodeMK"
             android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
             android:textAlignment="center"
-            android:layout_marginRight="5dp"
-            android:text="2019/2020 Gasal"
+            android:text="TI19101"
+            android:layout_marginStart="10dp"
             android:textColor="@android:color/black"
-            android:layout_width="150dp"
+            android:layout_width="70dp"
             android:fontFamily="@font/ubunturegular"
             android:layout_height="match_parent"/>
 
         <TextView
-            android:id="@+id/txtSemesterPresensi"
+            android:id="@+id/txtNamaMK"
             android:gravity="center"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
             android:textColor="@android:color/black"
-            android:text="Semester 1"
+            android:text="Praktik Pemrograman Mobile"
             android:fontFamily="@font/ubunturegular"
-            android:layout_width="100dp"
+            android:layout_width="200dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtHadirPresensi"
-            android:background="#d7fbe8"
+            android:id="@+id/txtSKS"
             android:textAlignment="center"
-            android:text="150 Kuliah (0) Jam"
+            android:text="4"
             android:fontFamily="@font/ubunturegular"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:layout_gravity="center"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtIzinPresensi"
-            android:background="#fffcca"
+            android:id="@+id/txtNilaiAngka"
             android:gravity="center"
             android:textAlignment="center"
-            android:paddingLeft="5dp"
+            android:text="4"
             android:textColor="@android:color/black"
             android:fontFamily="@font/ubunturegular"
-            android:paddingRight="5dp"
-            android:text="0 Kuliah (0) Jam"
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
 
         <TextView
-            android:id="@+id/txtSakitPresensi"
-            android:background="#fffcca"
+            android:id="@+id/txtNilaiHuruf"
+            android:text="A"
             android:fontFamily="@font/ubunturegular"
             android:textColor="@android:color/black"
             android:gravity="center"
             android:textAlignment="center"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="0 Kuliah (0) Jam"
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtAlphaPresensi"
-            android:background="#f6c7c7"
+            android:id="@+id/txtTotalNilai"
+            android:text="16"
             android:gravity="center"
             android:textAlignment="center"
             android:fontFamily="@font/ubunturegular"
             android:textColor="@android:color/black"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="0 Kuliah (0) Jam"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"/>
-        <TextView
-            android:id="@+id/txtKosongPresensi"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:fontFamily="@font/ubunturegular"
-            android:textColor="@android:color/black"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:text="0 Kuliah (0) Jam"
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
     </LinearLayout>

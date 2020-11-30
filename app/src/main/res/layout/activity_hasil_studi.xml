@@ -241,7 +241,7 @@
     <LinearLayout
         android:id="@+id/tablayout"
         android:layout_width="0dp"
-        android:layout_height="400dp"
+        android:layout_height="300dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ubhdtortu"
@@ -255,72 +255,104 @@
             android:orientation="horizontal"
             android:background="@drawable/roundcorner">
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pilih Semester"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
+                android:layout_centerHorizontal="true"
                 android:fontFamily="@font/ubunturegular"
-                android:layout_marginStart="10dp"
                 android:layout_centerVertical="true"/>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true">
-            <Button
-                android:id="@+id/btnSmt1"
-                android:layout_width="30dp"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:text="1"/>
-            <Button
-                android:id="@+id/btnSmt2"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:background="@android:color/transparent"
-                android:text="2"/>
-            <Button
-                android:id="@+id/btnSmt3"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:background="@android:color/transparent"
-                android:text="3"/>
-            <Button
-                android:id="@+id/btnSmt4"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:background="@android:color/transparent"
-                android:text="4"/>
-            <Button
-                android:id="@+id/btnSmt5"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:background="@android:color/transparent"
-                android:text="5"/>
-            <Button
-                android:id="@+id/btnSmt6"
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/ubunturegular"
-                android:textColor="@color/white"
-                android:background="@android:color/transparent"
-                android:text="6"/>
-            </LinearLayout>
         </RelativeLayout>
-        <FrameLayout
-            android:id="@+id/fragment_container"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-        </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/smt1"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 1"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 3"
+                        android:id="@+id/smt3"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 5"
+                        android:id="@+id/smt5"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/relativeLayout3"
+                app:layout_constraintTop_toTopOf="parent" >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 2"
+                        android:id="@+id/smt2"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 4"
+                        android:id="@+id/smt4"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"/>
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/roundcorner"
+                        android:text="Semester 6"
+                        android:id="@+id/smt6"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
