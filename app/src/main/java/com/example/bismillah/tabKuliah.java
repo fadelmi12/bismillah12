@@ -96,6 +96,27 @@ public class tabKuliah extends Fragment {
             }
         });
 
+        Button btnJadwal = (Button) view.findViewById(R.id.btnJadwal);
+        btnJadwal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmT1.getText().toString().trim();
+                Intent intent  = new Intent(getActivity(), ActivityJadwal.class);
+                intent.putExtra("NPM_Jadwal", npm);
+                startActivity(intent);
+            }
+        });
+        Button btnHS = (Button) view.findViewById(R.id.btnHasilStudiT1);
+        btnHS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String npm = txtNpmT1.getText().toString().trim();
+                Intent intent  = new Intent(getActivity(), HasilStudi.class);
+                intent.putExtra("NPM_HasilStudi", npm);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }

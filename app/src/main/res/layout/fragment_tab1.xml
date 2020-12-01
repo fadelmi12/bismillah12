@@ -35,6 +35,7 @@
             android:gravity="top"/>
 
         <Button
+            android:id="@+id/btnHasilStudiT1"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:drawableTop="@drawable/ic_hasilstudit1"
@@ -55,6 +56,7 @@
         android:layout_marginTop="30dp"
         android:orientation="vertical">
         <Button
+            android:id="@+id/btnJadwal"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:background="@android:color/transparent"

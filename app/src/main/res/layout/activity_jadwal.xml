@@ -31,6 +31,17 @@
             android:textColor="@android:color/white"
             android:textSize="18dp"
             android:textStyle="bold" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txtNpmJadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Jadwal Kuliah"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
     </RelativeLayout>
     <Button
         android:id="@+id/btndownloadJadwal"
@@ -182,10 +193,10 @@
                         android:textStyle="bold" />
 
                         <ListView
-                            android:id="@+id/listview_senen"
+                            android:id="@+id/listview_senin"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            tools:listitem="@layout/listview_senen" />
+                            tools:listitem="@layout/listview_senin" />
                     </TableRow>
                     <TableRow
                         android:layout_width="wrap_content"

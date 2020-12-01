@@ -13,7 +13,7 @@
             android:layout_marginStart="10dp"
             android:layout_gravity="center">
             <TextView
-                android:id="@+id/kodeMK"
+                android:id="@+id/kodeJumat"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="TI19101"
@@ -27,7 +27,7 @@
         <TextView
             android:layout_width="300dp"
             android:layout_height="45dp"
-            android:id="@+id/txtNamaMK"
+            android:id="@+id/txtNamaJumat"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:text="Praktik Pemrograman Mobile"
@@ -37,7 +37,7 @@
         <TextView
             android:layout_width="250dp"
             android:layout_height="45dp"
-            android:id="@+id/txtJenisKetrampilan"
+            android:id="@+id/txtDosenJumat"
             android:text="Susilo Veri Yulianto S.T., M.T."
             android:layout_gravity="center"
             android:textColor="@android:color/black"
@@ -47,7 +47,7 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="45dp"
-            android:id="@+id/txtJamKe"
+            android:id="@+id/txtJamJumat"
             android:text="1-2"
             android:layout_gravity="center"
             android:textColor="@android:color/black"
@@ -57,7 +57,7 @@
         <TextView
             android:layout_width="160dp"
             android:layout_height="45dp"
-            android:id="@+id/txtRuang"
+            android:id="@+id/txtRuangJumat"
             android:text="Gedung M. Nuh R. 308"
             android:layout_gravity="center"
             android:textColor="@android:color/black"
