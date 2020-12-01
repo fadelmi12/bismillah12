@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityJadwal">
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/ungu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_backHomeKetrampilan"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubunturegular"
+            android:text="Jadwal Kuliah"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btndownloadJadwal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/roundcorner"
+        android:drawableStart="@drawable/ic_baseline_get_app_24"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/ubunturegular"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:drawablePadding="5dp"
+        android:paddingRight="10dp"
+        android:text="Download Jadwal Kuliah"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl3"
+        app:layout_constraintWidth_percent=".55" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btndownloadJadwal"
+        app:layout_constraintWidth_percent=".9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/roundcorner">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/ubunturegular"
+                android:gravity="center_vertical"
+                android:text="Data Jadwal Kuliah Mahasiswa"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="#85C8C0">
+
+                        <TextView
+                            android:id="@+id/hari"
+                            android:layout_width="60dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Hari"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:layout_marginStart="10dp"
+                            android:text="Kode Mata Kuliah"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="300dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Nama Mata Kuliah"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Dosen Pengampu"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Jam Ke"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="160dp"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Ruang"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                    </TableRow>
+                </TableLayout>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Senin"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                        <ListView
+                            android:id="@+id/listview_senen"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/listview_senen" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Selasa"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+
+                        <ListView
+                            android:id="@+id/listview_selasa"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/listview_selasa" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Rabu"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                        <ListView
+                            android:id="@+id/listview_rabu"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/listview_rabu" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Kamis"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                        <ListView
+                            android:id="@+id/listview_kamis"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/listview_kamis" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="60dp"
+                            android:layout_height="100dp"
+                            android:layout_marginStart="10dp"
+                            android:fontFamily="@font/ubunturegular"
+                            android:gravity="center"
+                            android:text="Jumat"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold" />
+                        <ListView
+                            android:id="@+id/listview_jumat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:listitem="@layout/listview_jumat" />
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

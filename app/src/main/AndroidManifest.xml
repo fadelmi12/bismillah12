@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".semester6"></activity>
+        <activity android:name=".ActivityJadwal"></activity>
+        <activity android:name=".semester6" />
         <activity android:name=".semester5" />
         <activity android:name=".semester4" />
         <activity android:name=".semester3" />

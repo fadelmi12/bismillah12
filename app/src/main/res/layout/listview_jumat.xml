@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp">
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/kodeMK"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="TI19101"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/ubunturegular"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:id="@+id/txtNamaMK"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="Praktik Pemrograman Mobile"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:fontFamily="@font/ubunturegular" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:id="@+id/txtJenisKetrampilan"
+            android:text="Susilo Veri Yulianto S.T., M.T."
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:id="@+id/txtJamKe"
+            android:text="1-2"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:id="@+id/txtRuang"
+            android:text="Gedung M. Nuh R. 308"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:fontFamily="@font/ubunturegular"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+</LinearLayout>
