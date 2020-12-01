@@ -100,7 +100,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/statusHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -147,7 +147,7 @@
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/NPM"
+            android:id="@+id/NPMHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
@@ -161,10 +161,10 @@
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/angkatan"
+            android:id="@+id/angkatanHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NPM"
+            android:layout_below="@+id/NPMHs"
             android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_baseline_verified_user_24"
             android:drawablePadding="6dp"
@@ -176,10 +176,10 @@
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/prodi"
+            android:id="@+id/prodiHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/angkatan"
+            android:layout_below="@+id/angkatanHs"
             android:layout_marginTop="4dp"
             android:drawableLeft="@drawable/ic_baseline_flag_16"
             android:drawablePadding="6dp"
@@ -191,9 +191,10 @@
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/kotaHs"
             android:layout_width="98dp"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/angkatan"
+            android:layout_below="@+id/angkatanHs"
             android:layout_alignStart="@+id/garis"
             android:layout_marginStart="6dp"
             android:layout_marginTop="4dp"
@@ -207,9 +208,10 @@
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/noHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NPM"
+            android:layout_below="@+id/NPMHs"
             android:layout_alignStart="@+id/garis"
             android:layout_marginStart="6dp"
             android:layout_marginTop="4dp"
@@ -223,6 +225,7 @@
             android:textSize="11dp" />
 
         <TextView
+            android:id="@+id/kelasHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/garis"

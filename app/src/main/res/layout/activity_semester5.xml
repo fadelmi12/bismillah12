@@ -51,6 +51,18 @@
                 android:textColor="@android:color/white"
                 android:textSize="16dp"
                 android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/npmS5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/ubunturegular"
+                android:layout_below="@id/HasilStudi"
+                android:text="193307009"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="10dp"
+                android:textStyle="bold"/>
         </LinearLayout>
     </RelativeLayout>
 
@@ -170,7 +182,7 @@
                             android:textStyle="bold" />
                     </TableRow>
                     <ListView
-                        android:id="@+id/listViewPresensi"
+                        android:id="@+id/listViewS5"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         tools:listitem="@layout/listview_hasilstudismt5" />

@@ -168,7 +168,9 @@ public class HomeFragment extends Fragment {
         btnHasilStudi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String npm = txtuser.getText().toString();
                 Intent intent = new Intent(getActivity(), HasilStudi.class);
+                intent.putExtra("NPM_HasilStudi", npm);
                 startActivity(intent);
             }
         });

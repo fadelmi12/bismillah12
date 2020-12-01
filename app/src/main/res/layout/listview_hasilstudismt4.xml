@@ -7,7 +7,7 @@
         android:layout_width="wrap_content"
         android:layout_height="60dp">
         <TextView
-            android:id="@+id/txtKodeMK"
+            android:id="@+id/txtKodeS4"
             android:gravity="center"
             android:textAlignment="center"
             android:text="TI19101"
@@ -18,7 +18,7 @@
             android:layout_height="match_parent"/>
 
         <TextView
-            android:id="@+id/txtNamaMK"
+            android:id="@+id/txtNamaS4"
             android:gravity="center"
             android:textColor="@android:color/black"
             android:text="Praktik Pemrograman Mobile"
@@ -26,7 +26,7 @@
             android:layout_width="200dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtSKS"
+            android:id="@+id/txtSKSS4"
             android:textAlignment="center"
             android:text="4"
             android:fontFamily="@font/ubunturegular"
@@ -36,7 +36,7 @@
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtNilaiAngka"
+            android:id="@+id/txtNilaiAngkaS4"
             android:gravity="center"
             android:textAlignment="center"
             android:text="4"
@@ -46,7 +46,7 @@
             android:layout_height="match_parent"/>
 
         <TextView
-            android:id="@+id/txtNilaiHuruf"
+            android:id="@+id/txtNilaiHurufS4"
             android:text="A"
             android:fontFamily="@font/ubunturegular"
             android:textColor="@android:color/black"
@@ -55,7 +55,7 @@
             android:layout_width="80dp"
             android:layout_height="match_parent"/>
         <TextView
-            android:id="@+id/txtTotalNilai"
+            android:id="@+id/txtTotalNilaiS4"
             android:text="16"
             android:gravity="center"
             android:textAlignment="center"
