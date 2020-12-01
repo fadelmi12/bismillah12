@@ -135,7 +135,7 @@ public class DaftarUlang extends AppCompatActivity {
         requestQueue.add(request);
 
 
-        Button downloadDU = (Button) findViewById(R.id.download);
+        /*Button downloadDU = (Button) findViewById(R.id.download);
         downloadDU.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v1) {
@@ -150,7 +150,7 @@ public class DaftarUlang extends AppCompatActivity {
                 request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"KRS.pdf");
                 downloadmanager.enqueue(request);
             }
-        });
+        });*/
 
         Button btnBackHome = (Button) findViewById(R.id.btn_backHomeDaftarUlang);
         btnBackHome.setOnClickListener(new View.OnClickListener() {

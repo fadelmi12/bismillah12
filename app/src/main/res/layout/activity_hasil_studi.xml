@@ -225,7 +225,7 @@
             android:textSize="11dp" />
 
         <TextView
-            android:id="@+id/kelasHs"
+            android:id="@+id/kelas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/garis"
@@ -235,7 +235,22 @@
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
-            android:text="Kelas 3C"
+            android:text="Kelas"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/black"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/kelasHs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="7dp"
+            android:layout_toEndOf="@+id/kelas"
+            android:drawablePadding="6dp"
+            android:fontFamily="@font/ubunturegular"
+            android:gravity="center_vertical"
+            android:text="3C"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />

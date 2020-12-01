@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -238,6 +239,15 @@ public class SettingFragment extends Fragment {
                 } else {
                     passwordSetting.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 }
+            }
+        });
+
+        ImageButton btnLogout = (ImageButton) view.findViewById(R.id.btnLogout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -25,7 +25,16 @@ android:background="@color/white">
             android:textSize="18dp"
             android:textStyle="bold"
             tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_marginLeft="347dp"
+            android:layout_centerVertical="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_logout" />
     </RelativeLayout>
+
 
     <LinearLayout
         android:paddingTop="50dp"
