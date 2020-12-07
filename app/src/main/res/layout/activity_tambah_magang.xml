@@ -61,7 +61,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/txtNpmBahasa"
+                    android:id="@+id/txtNpmMagang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
@@ -97,7 +97,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edIdNoBahasa"
+                    android:id="@+id/edIdNoMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -129,7 +129,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edNamaBahasa"
+                    android:id="@+id/edJudulMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -161,7 +161,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edPeriodeBahasa"
+                    android:id="@+id/edTempatMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -193,7 +193,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edTahunBahasa"
+                    android:id="@+id/edProvinsiMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -224,7 +224,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edSkorBahasa"
+                    android:id="@+id/edKotaMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -255,7 +255,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edTanggalBahasa"
+                    android:id="@+id/edMulaiMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -285,7 +285,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edTanggalMulai"
+                    android:id="@+id/edSelesaiMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -315,7 +315,7 @@
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/edTanggalSelesai"
+                    android:id="@+id/edRingkasanMagang"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="-4dp"
@@ -327,7 +327,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnSubmitBahasa"
+                android:id="@+id/btnSubmitMagang"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20dp"

@@ -3,7 +3,9 @@ package com.example.bismillah;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -121,5 +123,16 @@ public class ActivityMagang extends AppCompatActivity {
         };
         RequestQueue requestQueue = Volley.newRequestQueue(ActivityMagang.this);
         requestQueue.add(request);
+
+        Button btnTambahMagang = (Button) findViewById(R.id.btnTambahOrganisasi);
+        btnTambahMagang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMagang.this, ActivityTambahMagang.class);
+                intent.putExtra("npmMagang", npm);
+                startActivity(intent);
+            }
+        });
+
     }
 }
