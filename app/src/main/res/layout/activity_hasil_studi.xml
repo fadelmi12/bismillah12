@@ -144,21 +144,23 @@
             android:text="NPM : "
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/NPMHs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="4dp"
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
+            android:drawableTint="@android:color/transparent"
             android:text="193307068"
+            android:drawableRight="@drawable/ic_baseline_person_16"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/angkatanHs"
@@ -173,7 +175,7 @@
             android:text="Angkatan 2019"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/prodiHs"
@@ -188,7 +190,7 @@
             android:text="D-III Teknologi Informasi"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
-            android:textSize="11dp" />
+            android:textSize="12dp" />
 
         <TextView
             android:id="@+id/kotaHs"
@@ -245,12 +247,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="7dp"
+            android:layout_marginTop="4dp"
             android:layout_toEndOf="@+id/kelas"
             android:drawablePadding="6dp"
             android:fontFamily="@font/ubunturegular"
             android:gravity="center_vertical"
             android:text="3C"
+            android:drawableRight="@drawable/ic_baseline_person_16"
+            android:drawableTint="@android:color/transparent"
             android:textAlignment="gravity"
             android:textColor="@android:color/black"
             android:textSize="11dp" />

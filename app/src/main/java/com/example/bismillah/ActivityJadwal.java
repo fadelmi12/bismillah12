@@ -149,9 +149,7 @@ public class ActivityJadwal extends AppCompatActivity {
                                 new int[]{R.id.kodeSelasa,R.id.txtNamaSelasa,R.id.txtDosenSelasa,
                                         R.id.txtJamSelasa,R.id.txtRuangSelasa}
                         );
-
                         listView1.setAdapter(adapter2);
-
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -287,10 +285,8 @@ public class ActivityJadwal extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-
                 params.put("npm", npm);
                 return params;
-
             }
         };
         RequestQueue requestQueue3 = Volley.newRequestQueue(ActivityJadwal.this);

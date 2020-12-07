@@ -81,13 +81,10 @@ public class ActivityTambahOrganisasi extends AppCompatActivity {
 
                                 HashMap<String, String> resultx = new HashMap<>();
 
-
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
-
                     }
                 }, new Response.ErrorListener() {
 

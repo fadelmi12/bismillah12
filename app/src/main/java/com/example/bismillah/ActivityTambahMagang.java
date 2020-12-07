@@ -77,7 +77,6 @@ public class ActivityTambahMagang extends AppCompatActivity {
                             JSONObject jsonObject = new JSONObject(s);
                             JSONArray a = jsonObject.getJSONArray("result");
                             for (int i = 0; i < a.length(); i++) {
-
                                 JSONObject c = a.getJSONObject(i);
                                 String judulMagang = c.getString("judulMagang");
                                 String no = c.getString("no");
@@ -93,8 +92,6 @@ public class ActivityTambahMagang extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
-
                     }
                 }, new Response.ErrorListener() {
 
@@ -116,7 +113,6 @@ public class ActivityTambahMagang extends AppCompatActivity {
                         params.put("tanggalSelesai", sSelesai);
                         params.put("ringkasan", sRingkasan);
                         return params;
-
                     }
                 };
 

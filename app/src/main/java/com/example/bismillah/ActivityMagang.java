@@ -47,6 +47,14 @@ public class ActivityMagang extends AppCompatActivity {
 
         JsonList = new ArrayList<>();
         txtNpmMagang.setText(npm);
+        btnTambahMagang = (Button) findViewById(R.id.btnTambahMagang);
+        btnTambahMagang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMagang.this, ActivityTambahMagang.class);
+                startActivity(intent);
+            }
+        });
 
         noMagang = (TextView) findViewById(R.id.npmMagang);
         judulMagang = (TextView) findViewById(R.id.txtJudulMagang);
@@ -124,7 +132,7 @@ public class ActivityMagang extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ActivityMagang.this);
         requestQueue.add(request);
 
-        Button btnTambahMagang = (Button) findViewById(R.id.btnTambahOrganisasi);
+        Button btnTambahMagang = (Button) findViewById(R.id.btnTambahMagang);
         btnTambahMagang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
