@@ -6,51 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ActivityRekapPresensi"
     android:background="@color/white">
-
-<Button
-    android:id="@+id/ubhdtdrpresensi"
-    android:layout_width="0dp"
-    android:layout_height="25dp"
-    android:layout_marginStart="18dp"
-    android:layout_marginEnd="8dp"
-    android:background="@drawable/roundcorner"
-    android:drawableStart="@drawable/ic_baseline_edit_24"
-
-    android:drawableTint="@color/white"
-    android:fontFamily="@font/ubunturegular"
-    android:text="ubah data diri"
-    android:gravity="center"
-    android:textColor="@color/white"
-    android:paddingLeft="14dp"
-    android:textSize="12dp"
-    android:textStyle="bold"
-    android:paddingRight="7dp"
-    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-    app:layout_constraintEnd_toStartOf="@+id/btnktp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
-
-<Button
-    android:id="@+id/btnktp"
-    android:layout_width="0dp"
-    android:layout_height="25dp"
-    android:layout_alignParentRight="true"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="18dp"
-    android:background="@drawable/roundcorner"
-    android:drawableStart="@drawable/ic_baseline_publish_24"
-    android:drawableTint="@color/white"
-    android:paddingLeft="14dp"
-    android:paddingRight="7dp"
-    android:fontFamily="@font/ubunturegular"
-    android:gravity="center"
-    android:text="upload Scan ktp"
-    android:textColor="@color/white"
-    android:textSize="12dp"
-    android:textStyle="bold"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/ubhdtdrpresensi"
-    app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 <RelativeLayout
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
@@ -259,108 +214,116 @@
             android:textSize="12dp" />
     </RelativeLayout>
 
-<LinearLayout
-    android:id="@+id/linearLayout2"
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/ubhdtdrpresensi"
-    app:layout_constraintWidth_percent=".9"
-    android:layout_marginTop="15dp">
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TableLayout
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:layout_constraintWidth_percent=".9">
+
+        <HorizontalScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TableRow
+
+            <TableLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-                <TextView
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:layout_marginRight="5dp"
-                    android:text="Tahun Akademik"
-                    android:layout_width="150dp"
-                    android:gravity="center"
+                android:layout_height="wrap_content">
 
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/ubunturegular"
-                    android:layout_height="30dp"/>
-                <TextView
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:text="Semester"
-                    android:fontFamily="@font/ubunturegular"
-                    android:layout_width="100dp"
-                    android:textColor="@android:color/black"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:background="#d7fbe8"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:textAlignment="center"
-                    android:fontFamily="@font/ubunturegular"
-                    android:text="Hadir"
-                    android:layout_width="80dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:background="#fffcca"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="Izin"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/ubunturegular"
-                    android:layout_width="80dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:background="#fffcca"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="Sakit"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/ubunturegular"
-                    android:layout_width="80dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:background="#f6c7c7"
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:text="Alpha"
-                    android:gravity="center"
-                    android:textColor="@android:color/black"
-                    android:fontFamily="@font/ubunturegular"
-                    android:layout_width="80dp"
-                    android:layout_height="match_parent"/>
-                <TextView
-                    android:textStyle="bold"
-                    android:textAlignment="center"
-                    android:layout_marginRight="5dp"
-                    android:text="Kosong"
-                    android:fontFamily="@font/ubunturegular"
-                    android:textColor="@android:color/black"
-                    android:layout_width="80dp"
-                    android:gravity="center"
-                    android:layout_height="match_parent"/>
-            </TableRow>
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-            <ListView
-                android:id="@+id/listViewPresensi"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:listitem="@layout/listview_presensi" />
-        </TableLayout>
-    </HorizontalScrollView>
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Tahun Akademik"
 
-</LinearLayout>
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ubunturegular"
+                        android:text="Semester"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#d7fbe8"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Hadir"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#fffcca"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Izin"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#fffcca"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Sakit"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:background="#f6c7c7"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Alpha"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:fontFamily="@font/ubunturegular"
+                        android:gravity="center"
+                        android:text="Kosong"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <ListView
+                    android:id="@+id/listViewPresensi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/listview_presensi" />
+            </TableLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

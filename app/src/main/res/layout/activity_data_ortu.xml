@@ -45,7 +45,7 @@
             android:layout_height="wrap_content">
             <Button
                 android:id="@+id/btnUbahDtDr"
-                android:layout_width="0dp"
+                android:layout_width="370dp"
                 android:layout_height="25dp"
                 android:layout_marginStart="18dp"
                 android:layout_marginEnd="8dp"
@@ -63,28 +63,6 @@
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                 app:layout_constraintEnd_toStartOf="@+id/btnktp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
-
-            <Button
-                android:id="@+id/btnktp"
-                android:layout_width="0dp"
-                android:layout_height="25dp"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="18dp"
-                android:background="@drawable/roundcorner"
-                android:drawableStart="@drawable/ic_baseline_publish_24"
-                android:drawableTint="@color/white"
-                android:paddingLeft="14dp"
-                android:paddingRight="7dp"
-                android:fontFamily="@font/ubunturegular"
-                android:gravity="center"
-                android:text="upload Scan ktp"
-                android:textColor="@color/white"
-                android:textSize="12dp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnUbahDtDr"
                 app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
             <LinearLayout

@@ -2,7 +2,13 @@ package com.example.bismillah;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
+import android.content.Context;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -351,6 +357,23 @@ public class ActivityJadwal extends AppCompatActivity {
         };
         RequestQueue requestQueue4 = Volley.newRequestQueue(ActivityJadwal.this);
         requestQueue4.add(request4);
+
+        Button downloadDU = (Button) findViewById(R.id.btndownloadJadwal);
+        downloadDU.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v1) {
+                DownloadManager downloadmanager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri = Uri.parse("https://pajuts.000webhostapp.com/JK.pdf");
+
+                DownloadManager.Request request = new DownloadManager.Request(uri);
+                request.setTitle("Jadwal Kuliah.pdf");
+                request.setDescription("Downloading");
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                request.setVisibleInDownloadsUi(false);
+                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS,"Jadwal Kuliah.pdf");
+                downloadmanager.enqueue(request);
+            }
+        });
 
     }
 }

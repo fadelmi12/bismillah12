@@ -33,7 +33,7 @@ public class DataDiri extends AppCompatActivity {
     JSONObject jsonObject;
     String url = "https://pajuts.000webhostapp.com/dtdiri/readdiribynpm.php";
     String npm, out;
-    TextView txtNpm,txtNIK,txtNama,txtLahir,txtAgama,txtJk,txtAlamat,txtAsal, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus;
+    TextView txtNpm,txtNIK,txtNama,txtLahir,txtAgama,txtJk,txtAlamat,txtAsal, txtAngkatan, txtProdi, txtKelas, txtNo, txtKota,txtStatus,txtnoHp,txtemail;
     Button btnubhdtdiri;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,8 @@ public class DataDiri extends AppCompatActivity {
         txtNo = (TextView) findViewById(R.id.noDtDr);
         txtKota = (TextView) findViewById(R.id.kotaDtDr);
         txtStatus = (TextView) findViewById(R.id.statusDtDr);
+        txtnoHp = (TextView) findViewById(R.id.noHpDtDr);
+        txtemail = (TextView) findViewById(R.id.emailDtDr);
         btnubhdtdiri = (Button) findViewById(R.id.btnUbahDtDr);
 
 
@@ -91,6 +93,7 @@ public class DataDiri extends AppCompatActivity {
                         String prodi = c.getString("prodi");
                         String kelas = c.getString("kelas");
                         String noHp = c.getString("noHp");
+                        String email = c.getString("email");
                         String kota = c.getString("kota");
                         String status = c.getString("status");
 
@@ -108,6 +111,8 @@ public class DataDiri extends AppCompatActivity {
                         txtNo.setText(noHp);
                         txtKota.setText(kota);
                         txtStatus.setText(status);
+                        txtnoHp.setText(noHp);
+                        txtemail.setText(email);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
